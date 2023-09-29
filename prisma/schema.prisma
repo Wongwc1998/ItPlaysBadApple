@@ -1,11 +1,41 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
+}
+
+model Item {
+  id           Int    @id @default(autoincrement())
+  title        String
+  description  String
+  authorId     Int     // Foreign key
+  author       Author  @relation(fields: [authorId], references: [id])
+  sourceUrl   String
+  tags     TagOnItem[]
+  previewImgUrl String
+}
+
+model Author {
+  id    Int    @id @default(autoincrement()) // Add an ID field to the Author
+  name  String @unique
+  url   String
+  items Item[] // One to many relation to items
+}
+
+model Tag {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  items    TagOnItem[]
+}
+
+model TagOnItem {
+  tagId  Int
+  itemId Int
+  tag    Tag   @relation(fields: [tagId], references: [id])
+  item   Item  @relation(fields: [itemId], references: [id])
+
+  @@id([tagId, itemId])
 }
