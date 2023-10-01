@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Sample Item 1",
+      "description": "This is a sample item description.",
+      "authorId": 1,
+      "sourceUrl": "https://example.com",
+      "tags": [1, 2],
+      "previewImgUrl": "https://example.com/preview1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Sample Item 2",
+      "description": "Another sample item description.",
+      "authorId": 2,
+      "sourceUrl": "https://example2.com",
+      "tags": [2, 3],
+      "previewImgUrl": "https://example.com/preview2.jpg"
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Author 1",
+      "url": "https://author1.com"
+    },
+    {
+      "id": 2,
+      "name": "Author 2",
+      "url": "https://author2.com"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Tag1"
+    },
+    {
+      "id": 2,
+      "name": "Tag2"
+    },
+    {
+      "id": 3,
+      "name": "Tag3"
+    }
+  ],
+  "tagOnItems": [
+    {
+      "tagId": 1,
+      "itemId": 1
+    },
+    {
+      "tagId": 2,
+      "itemId": 1
+    },
+    {
+      "tagId": 2,
+      "itemId": 2
+    },
+    {
+      "tagId": 3,
+      "itemId": 2
+    }
+  ]
+}
