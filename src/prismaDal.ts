@@ -7,17 +7,22 @@ export const prismaDal: DataAccessLayer = {
   getItems: async () => {
     return await prisma.item.findMany();
   },
+  getItem: async (id) => {
+    return await prisma.item.findUnique({
+      where: { id },
+    });
+  },
   deleteItem: async (id) => {
     await prisma.item.delete({
       where: { id },
     });
   },
-  createItem: async (data: Item) => {
+  createItem: async (data) => {
     await prisma.item.create({
       data,
     });
   },
-  updateItem: async (id: number, data: Item) => {
+  updateItem: async (id, data) => {
     await prisma.item.update({
       where: { id },
       data,
