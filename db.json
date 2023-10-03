@@ -5,30 +5,30 @@
       "title": "Sample Item 1",
       "description": "This is a sample item description.",
       "authorId": 1,
-      "sourceUrl": "https://example.com",
+      "videoUrl": "https://www.youtube.com/watch?v=MVrNn5TuMkY",
       "tags": [1, 2],
-      "previewImgUrl": "https://example.com/preview1.jpg"
+      "previewImgUrl": "https://img.youtube.com/vi/MVrNn5TuMkY/maxresdefault.jpg"
     },
     {
       "id": 2,
       "title": "Sample Item 2",
       "description": "Another sample item description.",
       "authorId": 2,
-      "sourceUrl": "https://example2.com",
+      "videoUrl": "https://www.youtube.com/watch?v=r-axdVfM0c0",
       "tags": [2, 3],
-      "previewImgUrl": "https://example.com/preview2.jpg"
+      "previewImgUrl": "https://img.youtube.com/vi/r-axdVfM0c0/maxresdefault.jpg"
     }
   ],
   "authors": [
     {
       "id": 1,
       "name": "Author 1",
-      "url": "https://author1.com"
+      "url": "https://google.com"
     },
     {
       "id": 2,
       "name": "Author 2",
-      "url": "https://author2.com"
+      "url": "https://google.com"
     }
   ],
   "tags": [

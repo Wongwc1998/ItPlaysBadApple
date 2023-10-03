@@ -13,7 +13,7 @@ model Item {
   description  String
   authorId     Int     // Foreign key
   author       Author  @relation(fields: [authorId], references: [id])
-  sourceUrl   String
+  videoUrl   String
   tags     TagOnItem[]
   previewImgUrl String
 }

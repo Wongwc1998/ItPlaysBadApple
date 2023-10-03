@@ -9,7 +9,7 @@ interface Item {
   title: string;
   description: string;
   authorId: number;
-  sourceUrl: string;
+  videoUrl: string;
   tags: number[];
   previewImgUrl: string;
 }
