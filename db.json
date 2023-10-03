@@ -2,7 +2,7 @@
   "items": [
     {
       "id": 1,
-      "title": "Sample Item 1",
+      "title": "Bad Apple!! played on Desmos but it's high quality with Bezier Curves",
       "description": "This is a sample item description.",
       "authorId": 1,
       "videoUrl": "https://www.youtube.com/watch?v=MVrNn5TuMkY",
@@ -11,12 +11,12 @@
     },
     {
       "id": 2,
-      "title": "Sample Item 2",
+      "title": "Bad Apple!! played on Google Maps",
       "description": "Another sample item description.",
       "authorId": 2,
       "videoUrl": "https://www.youtube.com/watch?v=r-axdVfM0c0",
       "tags": [2, 3],
-      "previewImgUrl": "https://img.youtube.com/vi/r-axdVfM0c0/maxresdefault.jpg"
+      "previewImgUrl": "https://img.youtube.com/vi/r-axdVfM0c0/hqdefault.jpg"
     }
   ],
   "authors": [

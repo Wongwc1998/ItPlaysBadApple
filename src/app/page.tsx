@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from '../components/ui/card';
+import { ThemeToggle } from "@/components/layouts/theme-toggle"
 
 interface Item {
   id: number;
@@ -33,10 +34,11 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-row items-center justify-between p-24">
+      <ThemeToggle />
       {items?.map((item) => (
         <Link href={`/item/${item.id}`} key={item.id}>
-            <Card className="mb-4">
+            <Card className="w-[300px] flex flex-col mb-4">
               <CardHeader>
                 <Image src={item.previewImgUrl} alt={item.title} width={150} height={150} />
               </CardHeader>
