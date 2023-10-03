@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from '../components/ui/card';
 import { ThemeToggle } from "@/components/layouts/theme-toggle"
 import { Item } from '@/types';
-import { ItemCard } from '@/components/item-card';
+import { ItemCard } from '@/components/cards/item-card';
 
 export default function Home() {
   const [items, setItems] = useState<Item[]>([]);

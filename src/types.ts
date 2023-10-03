@@ -4,6 +4,6 @@ export type Item = {
   description: string;
   authorId: number;
   videoUrl: string;
-  tags: number[];
+//   tags: number[];
   previewImgUrl: string;
 }
