@@ -4,16 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from '../components/ui/card';
 import { ThemeToggle } from "@/components/layouts/theme-toggle"
-
-interface Item {
-  id: number;
-  title: string;
-  description: string;
-  authorId: number;
-  videoUrl: string;
-  tags: number[];
-  previewImgUrl: string;
-}
+import { Item } from '@/types';
+import { ItemCard } from '@/components/item-card';
 
 export default function Home() {
   const [items, setItems] = useState<Item[]>([]);
@@ -36,7 +28,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-row items-center justify-between p-24">
       <ThemeToggle />
-      {items?.map((item) => (
+      {/* {items?.map((item) => (
         <Link href={`/item/${item.id}`} key={item.id}>
             <Card className="w-[300px] flex flex-col mb-4">
               <CardHeader>
@@ -48,6 +40,9 @@ export default function Home() {
               </CardContent>
             </Card>
         </Link>
+      ))} */}
+      {items?.map((item) => (
+        <ItemCard Item={item} key={item.id} />
       ))}
     </main>
   );
