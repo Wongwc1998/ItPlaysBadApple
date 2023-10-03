@@ -22,7 +22,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
   return (
     <div>
         {ItemId}
-      <YouTubePlayer videoId={result.videoUrl} />
+      {/* <YouTubePlayer videoId={result.videoUrl} /> */}
       <h1>{result.title}</h1>
       <h2>`by ${result.authorId}`</h2>
       <p>{result.description}</p>
