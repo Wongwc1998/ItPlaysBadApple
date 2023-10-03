@@ -2,6 +2,23 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
+      const author1 = await prisma.author.upsert({
+    where: { id: 1 },
+    update: {},
+    create: {
+      name: "Author 1",
+      url: "https://google.com",
+    },
+  });
+
+  const author2 = await prisma.author.upsert({
+    where: { id: 2 },
+    update: {},
+    create: {
+      name: "Author 2",
+      url: "https://google.com",
+    },
+  });
   const Item1 = await prisma.item.upsert({
     where: { id: 1 },
     update: {},
