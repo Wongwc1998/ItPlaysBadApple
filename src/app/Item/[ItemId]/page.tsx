@@ -1,7 +1,6 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import YouTubePlayer from "@/components/YouTubePlayer";
-import { DataAccessLayer } from "@/DalInterface";
 import { prismaDal } from "@/prismaDal";
 const dal = prismaDal;
 interface ItemPageProps {
