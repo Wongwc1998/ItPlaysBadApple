@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
-      const author1 = await prisma.author.upsert({
+  const author1 = await prisma.author.upsert({
     where: { id: 1 },
     update: {},
     create: {
@@ -21,24 +21,37 @@ async function main() {
   });
   const Item1 = await prisma.item.upsert({
     where: { id: 1 },
-    update: {},
+    update: {
+      title:
+        "Bad Apple!! played on Desmos but it's high quality with Bezier Curves",
+      description: "This is a sample item description.",
+      authorId: 1,
+      videoUrl: "MVrNn5TuMkY",
+      previewImgUrl: "https://img.youtube.com/vi/MVrNn5TuMkY/hqdefault.jpg",
+    },
     create: {
       title:
         "Bad Apple!! played on Desmos but it's high quality with Bezier Curves",
       description: "This is a sample item description.",
       authorId: 1,
-      videoUrl: "https://www.youtube.com/watch?v=MVrNn5TuMkY",
-      previewImgUrl: "https://img.youtube.com/vi/MVrNn5TuMkY/maxresdefault.jpg",
+      videoUrl: "MVrNn5TuMkY",
+      previewImgUrl: "https://img.youtube.com/vi/MVrNn5TuMkY/hqdefault.jpg",
     },
   });
   const Item2 = await prisma.item.upsert({
     where: { id: 2 },
-    update: {},
+    update: {
+      title: "Bad Apple!! played on Google Maps",
+      description: "Another sample item description.",
+      authorId: 2,
+      videoUrl: "r-axdVfM0c0",
+      previewImgUrl: "https://img.youtube.com/vi/r-axdVfM0c0/hqdefault.jpg",
+    },
     create: {
       title: "Bad Apple!! played on Google Maps",
       description: "Another sample item description.",
       authorId: 2,
-      videoUrl: "https://www.youtube.com/watch?v=r-axdVfM0c0",
+      videoUrl: "r-axdVfM0c0",
       previewImgUrl: "https://img.youtube.com/vi/r-axdVfM0c0/hqdefault.jpg",
     },
   });

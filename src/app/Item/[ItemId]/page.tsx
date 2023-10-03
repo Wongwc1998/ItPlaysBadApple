@@ -1,4 +1,3 @@
-import React from "react";
 import { notFound } from "next/navigation";
 import YouTubePlayer from "@/components/YouTubePlayer";
 import { prismaDal } from "@/prismaDal";
@@ -21,9 +20,9 @@ export default async function ItemPage({ params }: ItemPageProps) {
   return (
     <div>
         {ItemId}
-      {/* <YouTubePlayer videoId={result.videoUrl} /> */}
+      <YouTubePlayer videoId={result.videoUrl} />
       <h1>{result.title}</h1>
-      <h2>`by ${result.authorId}`</h2>
+      <h2>by {result.authorId}</h2>
       <p>{result.description}</p>
     </div>
   );
