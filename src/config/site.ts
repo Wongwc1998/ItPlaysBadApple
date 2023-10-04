@@ -1,8 +1,5 @@
 import type { FooterItem, MainNavItem } from "@/types"
 
-import { productCategories } from "@/config/products"
-import { slugify } from "@/lib/utils"
-
 export type SiteConfig = typeof siteConfig
 
 const links = {
@@ -15,49 +12,31 @@ export const siteConfig = {
   name: "It Plays Bad Apple",
   description:
     "A WIP catalog of all things that play Bad Apple!! on the internet, built with Next.js 13.",
-  url: "https://skateshop.sadmn.com",
-  ogImage: "https://skateshop.sadmn.com/opengraph-image.png",
+  url: "https://google.com",
+  ogImage: "https://picsum.photos/1200/630",
   mainNav: [
     {
       title: "Lobby",
       items: [
         {
-          title: "Products",
-          href: "/products",
-          description: "All the products we have to offer.",
-          items: [],
-        },
-        {
-          title: "Build a Board",
-          href: "/build-a-board",
-          description: "Build your own custom skateboard.",
-          items: [],
-        },
-        {
-          title: "Blog",
-          href: "/blog",
-          description: "Read our latest blog posts.",
+          title: "Items",
+          href: "/items",
+          description: "Everything that plays Bad Apple.",
           items: [],
         },
       ],
     },
-    ...productCategories.map((category) => ({
-      title: category.title,
+    {
+      title: "Contact",
       items: [
         {
-          title: "All",
-          href: `/categories/${slugify(category.title)}`,
-          description: `All ${category.title}.`,
+          title: "About me",
+          href: "/about-me",
+          description: "Everything about me",
           items: [],
         },
-        ...category.subcategories.map((subcategory) => ({
-          title: subcategory.title,
-          href: `/categories/${slugify(category.title)}/${subcategory.slug}`,
-          description: subcategory.description,
-          items: [],
-        })),
       ],
-    })),
+    },
   ] satisfies MainNavItem[],
   links,
   footerNav: [
@@ -120,11 +99,6 @@ export const siteConfig = {
       title: "Social",
       items: [
         {
-          title: "Twitter",
-          href: links.twitter,
-          external: true,
-        },
-        {
           title: "GitHub",
           href: links.githubAccount,
           external: true,
@@ -132,36 +106,6 @@ export const siteConfig = {
         {
           title: "Discord",
           href: links.discord,
-          external: true,
-        },
-        {
-          title: "cal.com",
-          href: links.calDotCom,
-          external: true,
-        },
-      ],
-    },
-    {
-      title: "Lofi",
-      items: [
-        {
-          title: "beats to study to",
-          href: "https://www.youtube.com/watch?v=jfKfPfyJRdk",
-          external: true,
-        },
-        {
-          title: "beats to chill to",
-          href: "https://www.youtube.com/watch?v=rUxyKA_-grg",
-          external: true,
-        },
-        {
-          title: "a fresh start",
-          href: "https://www.youtube.com/watch?v=rwionZbOryo",
-          external: true,
-        },
-        {
-          title: "coffee to go",
-          href: "https://www.youtube.com/watch?v=2gliGzb2_1I",
           external: true,
         },
       ],

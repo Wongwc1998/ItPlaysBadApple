@@ -30,17 +30,6 @@ export function MobileNav({ mainNavItems, sidebarNavItems }: MobileNavProps) {
 
   const navItems = React.useMemo(() => {
     const items = mainNavItems ?? [];
-    const myAccountItem = {
-      title: "My Account",
-      items: sidebarNavItems,
-    };
-    const myAccountIndex = items.findIndex(
-      (item) => item.title === "My Account"
-    );
-    if (myAccountIndex !== -1) {
-      items.splice(myAccountIndex, 1);
-    }
-    items.splice(1, 0, myAccountItem);
     return items;
   }, [mainNavItems, sidebarNavItems]);
 
