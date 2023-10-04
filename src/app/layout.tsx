@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/providers";
 import { cn } from "@/lib/utils"
 import { fontHeading, fontMono, fontSans } from "@/lib/fonts"
+import { SiteHeader } from "@/components/layouts/site-header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
           fontHeading.variable
         )}
       >
+        <SiteHeader />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

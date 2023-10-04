@@ -47,7 +47,6 @@ export function ItemCard({ Item, className, ...props }: ItemCardProps) {
         <CardContent className="grid gap-2.5 p-4">
           <CardTitle className="line-clamp-1">{Item.title}</CardTitle>
           <CardDescription className="line-clamp-2">
-            {Item.description}
           </CardDescription>
         </CardContent>
       </Link>
