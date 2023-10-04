@@ -4,7 +4,7 @@ export const metadata = {
   title: 'What is "Bad Apple!!" ?',
 };
 
-export default async function Info() {
+export default async function About() {
   return (
     <div className="container max-w-4xl py-6 lg:py-10">
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
@@ -64,9 +64,14 @@ export default async function Info() {
             black-and-white, and the silhouette of the character in the music
             video is very recognizable. In many ways Bad Apple!! is similar to
             the video game Doom, in that it is an elementary, yet charming and
-            recognizable piece of art, that serves as a "Hello World!" for
+            recognizable piece of art, that serves as a &quot;Hello World!&quot; for
             graphic display capabilities. This website thus serves as a catalog
-            for all things that can play the "Bad Apple!!" video.
+            for all things that can play the &quot;Bad Apple!!&quot; video.
+          </p>
+          <p>
+            Unfortunately this website does not play the &quot;Bad Apple!!&quot; video,
+            YET. I need to figure out how to implement the Bad Apple CSS art
+            across the website.
           </p>
         </div>
       </div>
