@@ -13,7 +13,7 @@ export default function YouTubePlayer({ videoId }: YouTubePlayerProps) {
     const player = event.target;
 
     // For example, you can automatically play the video
-    player.playVideo();
+    // player.playVideo();
   };
 
   const onError = (error: { data: any; target: YT.Player }) => {
