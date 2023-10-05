@@ -7,6 +7,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Callout } from "@/components/mdx/callout"
 import { CodeBlock } from "@/components/mdx/code-block"
 import { MdxCard } from "@/components/mdx/mdx-card"
+import YouTubePlayer from "@/components/YouTubePlayer"
 
 /** Originally from `shadcn/ui-docs`
  * @link https://github.com/shadcn/ui/blob/main/apps/www/components/mdx-components.tsx
@@ -151,6 +152,7 @@ const components = {
   AspectRatio,
   Card: MdxCard,
   Callout,
+  YouTubePlayer,
 }
 
 interface MdxProps {

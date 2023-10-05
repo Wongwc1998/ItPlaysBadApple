@@ -27,14 +27,32 @@ export const siteConfig = {
       ],
     },
     {
-      title: "Contact",
+      title: "Contact & Information",
       items: [
+        {
+          title: "What is \"Bad Apple!!\" ?",
+          href: "/about",
+          description: "What this website is about",
+          items: [],
+        },
         {
           title: "About me",
           href: "/about-me",
           description: "Everything about me",
           items: [],
         },
+        {
+          title: "Contact",
+          href: "/contact",
+          description: "Contact me",
+          items: [],
+        },
+        {
+          title: "Credits",
+          href: "/credits",
+          description: "How this website is made",
+          items: [],
+        }
       ],
     },
   ] satisfies MainNavItem[],
