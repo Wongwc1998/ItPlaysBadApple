@@ -35,47 +35,6 @@ async function getPageFromParams(params: PageProps["params"]) {
   return page
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  const page = await getPageFromParams(params)
-
-  if (!page) {
-    return {}
-  }
-
-  const url = ("/")
-
-  const ogUrl = new URL(`${url}/api/og`)
-  ogUrl.searchParams.set("title", page.title)
-  ogUrl.searchParams.set("type", siteConfig.name)
-  ogUrl.searchParams.set("mode", "light")
-
-  return {
-    title: page.title,
-    description: page.description,
-    openGraph: {
-      title: page.title,
-      description: page.description,
-      type: "article",
-      url: page.slug,
-      images: [
-        {
-          url: ogUrl.toString(),
-          width: 1200,
-          height: 630,
-          alt: page.title,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: page.title,
-      description: page.description,
-      images: [ogUrl.toString()],
-    },
-  }
-}
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
