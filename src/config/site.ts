@@ -44,18 +44,8 @@ export const siteConfig = {
       title: "Credits",
       items: [
         {
-          title: "OneStopShop",
-          href: "https://onestopshop.jackblatch.com",
-          external: true,
-        },
-        {
-          title: "Acme Corp",
-          href: "https://acme-corp.jumr.dev",
-          external: true,
-        },
-        {
-          title: "craft.mxkaske.dev",
-          href: "https://craft.mxkaske.dev",
+          title: "Skateshop",
+          href: "https://skateshop.sadmn.com/",
           external: true,
         },
         {
@@ -81,16 +71,6 @@ export const siteConfig = {
         {
           title: "Contact",
           href: "/contact",
-          external: false,
-        },
-        {
-          title: "Terms",
-          href: "/terms",
-          external: false,
-        },
-        {
-          title: "Privacy",
-          href: "/privacy",
           external: false,
         },
       ],
