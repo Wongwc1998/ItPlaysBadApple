@@ -11,6 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "contentlayer build && tsc --noEmit",
+    "postinstall": "prisma generate",
     "test": "jest"
   },
   "dependencies": {
