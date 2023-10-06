@@ -23,7 +23,6 @@ interface PageProps {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/require-await
 async function getPageFromParams(params: PageProps["params"]) {
   const slug = params?.slug?.join("/") ?? ""
   const page = allPages.find((page) => page.slugAsParams === slug)
@@ -35,8 +34,6 @@ async function getPageFromParams(params: PageProps["params"]) {
   return page
 }
 
-
-// eslint-disable-next-line @typescript-eslint/require-await
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
   return allPages.map((page) => ({
     slug: page.slugAsParams.split("/"),

@@ -15,7 +15,7 @@ export default function YouTubePlayer({ videoId }: YouTubePlayerProps) {
     // player.playVideo();
   };
 
-  const onError = (error: { data: any; target: YT.Player }) => {
+  const onError = (error: { target: YT.Player }) => {
     console.error("YouTube Player Error:", error);
   };
 

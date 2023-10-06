@@ -4,12 +4,12 @@ import { prismaDal } from "@/prismaDal";
 const dal = prismaDal;
 interface ItemPageProps {
   params: {
-    ItemId: string;
+    slug: string;
   };
 }
 
 export default async function ItemPage({ params }: ItemPageProps) {
-  const ItemId = Number(params.ItemId);
+  const ItemId = Number(params.slug);
   const result = await dal.getItem(ItemId);
   //log out the item in the response
   console.log(result);

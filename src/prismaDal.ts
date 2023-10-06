@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { DataAccessLayer } from "./DalInterface";
+import { type DataAccessLayer } from "./DalInterface";
 
 const prisma = new PrismaClient();
 
