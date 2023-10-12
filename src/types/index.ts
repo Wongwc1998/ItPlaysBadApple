@@ -8,6 +8,8 @@ export type Item = {
   videoUrl: string;
   //   tags: number[];
   previewImgUrl: string;
+  createdAt: Date;
+  updatedAt: Date;
 };
 
 export interface NavItem {

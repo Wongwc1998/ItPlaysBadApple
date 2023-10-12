@@ -20,7 +20,7 @@ export const sortOptions = [
   },
 ];
 
-export const productCategories = [
+export const itemCategories = [
   {
     title: "skateboards",
     image: "/images/skateboard-one.webp",
@@ -72,7 +72,7 @@ export const productCategories = [
   },
 ] satisfies Category[];
 
-export const productTags = [
+export const itemTags = [
   "new",
   "sale",
   "bestseller",
@@ -87,7 +87,7 @@ export function getSubcategories(category?: string): Option[] {
   if (!category) return [];
 
   const subcategories =
-    productCategories
+    itemCategories
       .find((c) => c.title === category)
       ?.subcategories.map((s) => ({
         label: s.title,
