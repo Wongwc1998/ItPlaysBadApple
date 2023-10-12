@@ -28,13 +28,13 @@ export default function RootLayout({
           fontHeading.variable
         )}
       >
-        <SiteHeader />
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
+        <SiteHeader />
           {children}
         </ThemeProvider>
       </body>

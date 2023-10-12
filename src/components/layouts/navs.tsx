@@ -4,6 +4,7 @@ import { dashboardConfig } from "@/config/dashboard";
 import { siteConfig } from "@/config/site";
 import { MainNav } from "@/components/layouts/main-nav";
 import { MobileNav } from "@/components/layouts/mobile-nav";
+import { ThemeToggle } from "@/components/layouts/theme-toggle";
 
 export function Navs() {
   return (
@@ -13,6 +14,7 @@ export function Navs() {
         mainNavItems={siteConfig.mainNav}
         sidebarNavItems={dashboardConfig.sidebarNav}
       />
+      <ThemeToggle />
     </>
   );
 }
