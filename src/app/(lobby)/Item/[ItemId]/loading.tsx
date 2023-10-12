@@ -5,7 +5,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { Icons } from "@/components/icons"
 import { Shell } from "@/components/shells/shell"
 
-export default function ProductLoading() {
+export default function ItemLoading() {
   return (
     <Shell>
       <div className="flex items-center space-x-2">

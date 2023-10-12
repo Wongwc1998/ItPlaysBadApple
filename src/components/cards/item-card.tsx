@@ -26,7 +26,7 @@ export function ItemCard({ Item, className, ...props }: ItemCardProps) {
       className={cn("h-full overflow-hidden rounded-sm", className)}
       {...props}
     >
-      <Link href={`/Item/${Item.id}`}>
+      <Link href={`/item/${Item.id}`}>
         <CardHeader className="border-b p-0">
           <AspectRatio ratio={4 / 3}>
             {
@@ -43,7 +43,7 @@ export function ItemCard({ Item, className, ...props }: ItemCardProps) {
         </CardHeader>
         <span className="sr-only">{Item.title}</span>
       </Link>
-      <Link href={`/Item/${Item.id}`} tabIndex={-1}>
+      <Link href={`/item/${Item.id}`} tabIndex={-1}>
         <CardContent className="grid gap-2.5 p-4">
           <CardTitle className="line-clamp-1">{Item.title}</CardTitle>
           <CardDescription className="line-clamp-2">
