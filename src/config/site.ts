@@ -52,6 +52,12 @@ export const siteConfig = {
           href: "/credits",
           description: "How this website is made",
           items: [],
+        },
+        {
+          title: "To-Do List",
+          href: "/todos",
+          description: "The list of extra features that need to be implemented.",
+          items: [],
         }
       ],
     },
