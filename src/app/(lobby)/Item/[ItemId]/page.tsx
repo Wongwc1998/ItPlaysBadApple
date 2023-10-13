@@ -19,11 +19,22 @@ export default async function ItemPage({ params }: ItemPageProps) {
   }
 
   return (
-    <div>
-      <YouTubePlayer videoId={result.videoUrl} />
-      <h1>{result.title}</h1>
-      <h2>by {result.authorId}</h2>
-      <p>{result.description}</p>
+    <div className="border flex flex-row m-4 p-4 dark:bg-slate-800 bg-gray-100 rounded items-center justify-center">
+        <YouTubePlayer videoId={result.videoUrl} />
+      <div className="flex flex-col mx-4">
+        <h1 className="text-xl font-bold">{result.title}</h1>
+        <h2 className="text-lg mt-2">by {result.authorId}</h2>
+        <p className="mt-4">{result.description}</p>
+        <div className="mt-5 flex flex-wrap gap-2">
+          {result.tags && result.tags.map(tag => (
+            <div key={tag} className="border border-black px-4 py-2 my-2 rounded dark:bg-slate-950 bg-white">
+              {tag}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
+
+
