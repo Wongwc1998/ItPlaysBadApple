@@ -20,6 +20,7 @@ export async function filterItemsAction(query: string) {
     select: {
       id: true,
       title: true,
+      previewImgUrl: true,
     },
   });
 

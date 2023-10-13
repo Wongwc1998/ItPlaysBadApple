@@ -9,6 +9,7 @@ import { itemCategories } from "@/config/items";
 import { cn, isMacOs } from "@/lib/utils";
 import { useDebounce } from "@/hooks/use-debounce";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import {
   CommandDialog,
   CommandEmpty,
@@ -21,7 +22,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { filterItemsAction } from "@/app/_actions/item";
 
 interface ItemGroup {
-  vars: Pick<Item, "id" | "title">[];
+  vars: Pick<Item, "id" | "title" | "previewImgUrl">[];
 }
 
 export function ItemsCombobox() {
@@ -128,11 +129,14 @@ export function ItemsCombobox() {
                       handleSelect(() => router.push(`/item/${item.id}`))
                     }
                   >
-                    <CategoryIcon
-                      className="mr-2 h-4 w-4 text-muted-foreground"
-                      aria-hidden="true"
+                    <Image
+                      src={item.previewImgUrl}
+                      alt={item.title}
+                      className="mr-2 object-cover text-muted-foreground border border-muted rounded-sm"
+                      width={64}
+                      height={64}
                     />
-                    <span className="truncate">{item.title}</span>
+                    <span className="flex-1">{item.title}</span>
                   </CommandItem>
                 );
               })
