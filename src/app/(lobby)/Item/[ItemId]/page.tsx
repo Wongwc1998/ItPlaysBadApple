@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import YouTubePlayer from "@/components/YouTubePlayer";
+import VideoIframe from "@/components/YoutubeIframe";
 import { prismaDal } from "@/prismaDal";
 const dal = prismaDal;
 interface ItemPageProps {
@@ -20,7 +20,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
   return (
     <div className="border flex flex-col md:flex-row m-4 p-4 dark:bg-slate-800 bg-gray-100 rounded items-center justify-center">
-        <YouTubePlayer videoId={result.videoUrl} className="mb-4 md:mb-0"/>
+        <VideoIframe videoId={result.videoUrl} title={result.title} />
       <div className="flex flex-col mx-4">
         <h1 className="text-xl font-bold">{result.title}</h1>
         <h2 className="text-lg mt-2">by {result.authorId}</h2>
