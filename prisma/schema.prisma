@@ -1,21 +1,23 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider             = "postgresql"
+  url                  = env("DATABASE_URL")
 }
 
 model Item {
-  id           Int    @id @default(autoincrement())
-  title        String
-  description  String
-  authorId     Int     // Foreign key
-  author       Author  @relation(fields: [authorId], references: [id])
-  videoUrl   String
-  tags     TagOnItem[]
+  id            Int         @id @default(autoincrement())
+  title         String
+  description   String
+  authorId      Int // Foreign key
+  author        Author      @relation(fields: [authorId], references: [id])
+  videoUrl      String
+  tags          String[]
   previewImgUrl String
+
+  @@index([authorId])
 }
 
 model Author {
@@ -23,19 +25,4 @@ model Author {
   name  String @unique
   url   String
   items Item[] // One to many relation to items
-}
-
-model Tag {
-  id       Int       @id @default(autoincrement())
-  name     String    @unique
-  items    TagOnItem[]
-}
-
-model TagOnItem {
-  tagId  Int
-  itemId Int
-  tag    Tag   @relation(fields: [tagId], references: [id])
-  item   Item  @relation(fields: [itemId], references: [id])
-
-  @@id([tagId, itemId])
 }

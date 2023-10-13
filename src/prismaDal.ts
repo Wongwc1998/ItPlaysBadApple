@@ -8,6 +8,8 @@ export const prismaDal: DataAccessLayer = {
     return await prisma.item.findMany();
   },
   getItem: async (id) => {
+    console.log({ id });
+    console.log(typeof id);
     return await prisma.item.findUnique({
       where: { id },
     });

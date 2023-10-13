@@ -6,7 +6,7 @@ export type Item = {
   description: string;
   authorId: number;
   videoUrl: string;
-  //   tags: number[];
+  tags: string[];
   previewImgUrl: string;
   createdAt: Date;
   updatedAt: Date;
@@ -44,9 +44,9 @@ export type MainNavItem = NavItemWithOptionalChildren;
 export type SidebarNavItem = NavItemWithChildren;
 
 export interface Option {
-  label: string
-  value: string
-  icon?: React.ComponentType<{ className?: string }>
+  label: string;
+  value: string;
+  icon?: React.ComponentType<{ className?: string }>;
 }
 
 export interface Category {

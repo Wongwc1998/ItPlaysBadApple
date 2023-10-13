@@ -13,6 +13,7 @@ export async function filterItemsAction(query: string) {
     where: {
       title: {
         contains: query,
+        mode: 'insensitive', // This makes the filter case-insensitive,
       },
     },
     take: 10,
