@@ -61,7 +61,7 @@ const VideoIframe: React.FC<IProps> = (props) => {
       src={videoURL}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
-    style={{ margin: '1rem' }}  // Add this line
+      className="m-4"
     />
   );
 };
