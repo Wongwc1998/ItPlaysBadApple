@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { type Item } from "@/types";
 import { type z } from "zod";
 import { prisma } from "@/app/db";
+import { getItemsSchema } from "@/lib/validations/item";
 
 export async function filterItemsAction(query: string) {
   if (query.length === 0) return null;
@@ -28,4 +29,37 @@ export async function filterItemsAction(query: string) {
     vars: results,
   };
   return [itemgroup];
+}
+
+export async function getItemsAction(
+  input: z.infer<typeof getItemsSchema>
+) {
+  const [column, order] =
+    (input.sort?.split(".") as [
+      keyof Item | undefined,
+      "asc" | "desc" | undefined,
+    ]) ?? []
+  const tags = input.tags?.split(".") ?? []
+
+  const items = await prisma.item.findMany({
+    take: input.limit,
+    skip: input.offset,
+    //tags is an array of strings
+    where: {
+      tags: {
+        hasEvery: tags,
+      },
+    },
+    orderBy: {
+      [column ?? "createdAt"]: order ?? "desc",
+    },
+  });
+   const count = 2;
+
+
+
+  return {
+    items,
+    count,
+  }
 }

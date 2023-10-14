@@ -10,11 +10,11 @@ export const sortOptions = [
   },
   {
     label: "Alphabetical: A to Z",
-    value: "name.asc",
+    value: "title.asc",
   },
   {
     label: "Alphabetical: Z to A",
-    value: "name.desc",
+    value: "title.desc",
   },
 ];
 
@@ -23,7 +23,7 @@ export const itemCategories = [
     title: "skateboards",
     image: "/images/skateboard-one.webp",
     icon: Icons.logo,
-    subcategories: [
+    tags: [
       {
         title: "Decks",
         description: "The board itself.",
@@ -84,13 +84,13 @@ export const itemTags = [
 export function getSubcategories(category?: string): Option[] {
   if (!category) return [];
 
-  const subcategories =
+  const tags =
     itemCategories
       .find((c) => c.title === category)
-      ?.subcategories.map((s) => ({
+      ?.tags.map((s) => ({
         label: s.title,
         value: s.slug,
       })) ?? [];
 
-  return subcategories;
+  return tags;
 }

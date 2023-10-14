@@ -53,7 +53,7 @@ export interface Category {
   title: string;
   image: string;
   icon: React.ComponentType<{ className?: string }>;
-  subcategories: Subcategory[];
+  tags: Subcategory[];
 }
 
 export interface Subcategory {

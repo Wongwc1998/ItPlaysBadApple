@@ -109,7 +109,7 @@ export function Items({
                           price_range: 0 - 100,
                           store_ids: null,
                           categories: null,
-                          subcategories: null,
+                          tags: null,
                         })}`
                       )
 
