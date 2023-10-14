@@ -28,7 +28,7 @@ async function main() {
       authorId: 1,
       videoUrl: "MVrNn5TuMkY",
       previewImgUrl: "https://img.youtube.com/vi/MVrNn5TuMkY/hqdefault.jpg",
-      tags: ["Software", "Bezier Curves"]
+      tags: ["software", "bezier-curves"]
     },
     create: {
       title:
@@ -37,7 +37,7 @@ async function main() {
       authorId: 1,
       videoUrl: "MVrNn5TuMkY",
       previewImgUrl: "https://img.youtube.com/vi/MVrNn5TuMkY/hqdefault.jpg",
-      tags: ["Software", "Bezier Curves"]
+      tags: ["software", "bezier-curves"]
     },
   });
   const Item2 = await prisma.item.upsert({
@@ -48,7 +48,7 @@ async function main() {
       authorId: 2,
       videoUrl: "r-axdVfM0c0",
       previewImgUrl: "https://img.youtube.com/vi/r-axdVfM0c0/hqdefault.jpg",
-      tags: ["Software"]
+      tags: ["software", "google"]
     },
     create: {
       title: "Bad Apple!! played on Google Maps",
@@ -56,7 +56,7 @@ async function main() {
       authorId: 2,
       videoUrl: "r-axdVfM0c0",
       previewImgUrl: "https://img.youtube.com/vi/r-axdVfM0c0/hqdefault.jpg",
-      tags: ["Software"]
+      tags: ["software", "google"]
     },
   });
   console.log({ Item1, Item2 });

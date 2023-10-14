@@ -1,20 +1,21 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import * as React from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
   ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-} from "@radix-ui/react-icons"
-import { Item, Option } from "@/types"
-import { ItemCard } from "@/components/cards/item-card"
-import { sortOptions } from "@/config/items"
+} from "@radix-ui/react-icons";
+import { Item, Option } from "@/types";
+import { ItemCard } from "@/components/cards/item-card";
+import { sortOptions } from "@/config/items";
+import { getTags } from "@/config/items";
 
-import { cn, toTitleCase, truncate } from "@/lib/utils"
-import { useDebounce } from "@/hooks/use-debounce"
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
+import { cn, toTitleCase, truncate } from "@/lib/utils";
+import { useDebounce } from "@/hooks/use-debounce";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,11 +23,11 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Separator } from "@/components/ui/separator"
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
 import {
   Sheet,
   SheetContent,
@@ -34,13 +35,14 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet"
+} from "@/components/ui/sheet";
+import { MultiSelect } from "@/components/multi-select";
 
 interface ItemsProps extends React.HTMLAttributes<HTMLDivElement> {
-  items: Item[]
-  pageCount: number
-  authorId?: Item["authorId"]
-  tags?: Item["tags"][]
+  items: Item[];
+  pageCount: number;
+  authorId?: Item["authorId"];
+  tags?: Item["tags"][];
 }
 
 export function Items({
@@ -50,36 +52,53 @@ export function Items({
   tags,
   ...props
 }: ItemsProps) {
-  const router = useRouter()
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-  const [isPending, startTransition] = React.useTransition()
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [isPending, startTransition] = React.useTransition();
 
   // Search params
-  const page = searchParams?.get("page") ?? "1"
-  const per_page = searchParams?.get("per_page") ?? "8"
-  const sort = searchParams?.get("sort") ?? "createdAt.desc"
+  const page = searchParams?.get("page") ?? "1";
+  const per_page = searchParams?.get("per_page") ?? "8";
+  const sort = searchParams?.get("sort") ?? "createdAt.desc";
 
   // Create query string
   const createQueryString = React.useCallback(
     (params: Record<string, string | number | null>) => {
-      const newSearchParams = new URLSearchParams(searchParams?.toString())
+      const newSearchParams = new URLSearchParams(searchParams?.toString());
 
       for (const [key, value] of Object.entries(params)) {
         if (value === null) {
-          newSearchParams.delete(key)
+          newSearchParams.delete(key);
         } else {
-          newSearchParams.set(key, String(value))
+          newSearchParams.set(key, String(value));
         }
       }
 
-      return newSearchParams.toString()
+      return newSearchParams.toString();
     },
     [searchParams]
-  )
+  );
 
+  // Tags filter
+  const [selectedTags, setSelectedTags] = React.useState<Option[] | null>(null);
+  const thetags = getTags();
 
-
+  React.useEffect(() => {
+    startTransition(() => {
+      router.push(
+        `${pathname}?${createQueryString({
+          tags: selectedTags?.length
+            ? selectedTags.map((s) => s.value).join(".")
+            : null,
+        })}`,
+        {
+          scroll: false,
+        }
+      );
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedTags]);
 
   return (
     <section className="flex flex-col space-y-6" {...props}>
@@ -95,7 +114,22 @@ export function Items({
               <SheetTitle>Filters</SheetTitle>
             </SheetHeader>
             <Separator />
-            <div>
+            <div className="flex flex-1 flex-col gap-5 overflow-hidden px-1">
+                {thetags ? (
+                  <div className="space-y-4">
+                    <h3 className="text-sm font-medium tracking-wide text-foreground">
+                      Tags
+                    </h3>
+                    <MultiSelect
+                      placeholder="Select tags"
+                      selected={selectedTags}
+                      setSelected={setSelectedTags}
+                      options={thetags}
+                    />
+                  </div>
+                ) : null}
+              </div>
+              <div>
               <Separator className="my-4" />
               <SheetFooter>
                 <Button
@@ -106,14 +140,11 @@ export function Items({
                     startTransition(() => {
                       router.push(
                         `${pathname}?${createQueryString({
-                          price_range: 0 - 100,
-                          store_ids: null,
-                          categories: null,
                           tags: null,
                         })}`
-                      )
-
-                    })
+                      );
+                      setSelectedTags(null);
+                    });
                   }}
                   disabled={isPending}
                 >
@@ -146,8 +177,8 @@ export function Items({
                       {
                         scroll: false,
                       }
-                    )
-                  })
+                    );
+                  });
                 }}
               >
                 {option.label}
@@ -170,5 +201,5 @@ export function Items({
         ))}
       </div>
     </section>
-  )
+  );
 }

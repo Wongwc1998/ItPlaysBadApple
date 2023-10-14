@@ -1,4 +1,4 @@
-import type { Category, Option } from "@/types";
+import type { Category, Option, Subcategory } from "@/types";
 
 import { Icons } from "@/components/icons";
 
@@ -18,79 +18,29 @@ export const sortOptions = [
   },
 ];
 
-export const itemCategories = [
-  {
-    title: "skateboards",
-    image: "/images/skateboard-one.webp",
-    icon: Icons.logo,
-    tags: [
-      {
-        title: "Decks",
-        description: "The board itself.",
-        image: "/images/deck-one.webp",
-        slug: "decks",
-      },
-      {
-        title: "Wheels",
-        description: "The wheels that go on the board.",
-        image: "/images/wheel-one.webp",
-        slug: "wheels",
-      },
-      {
-        title: "Trucks",
-        description: "The trucks that go on the board.",
-        image: "/images/truck-one.webp",
-        slug: "trucks",
-      },
-      {
-        title: "Bearings",
-        description: "The bearings that go in the wheels.",
-        image: "/images/bearing-one.webp",
-        slug: "bearings",
-      },
-      {
-        title: "Griptape",
-        description: "The griptape that goes on the board.",
-        image: "/images/griptape-one.webp",
-        slug: "griptape",
-      },
-      {
-        title: "Hardware",
-        description: "The hardware that goes on the board.",
-        image: "/images/hardware-one.webp",
-        slug: "hardware",
-      },
-      {
-        title: "Tools",
-        description: "The tools that go with the board.",
-        image: "/images/tool-one.webp",
-        slug: "tools",
-      },
-    ],
-  },
-] satisfies Category[];
-
 export const itemTags = [
-  "new",
-  "sale",
-  "bestseller",
-  "featured",
-  "popular",
-  "trending",
-  "limited",
-  "exclusive",
-];
+  {
+    title: "Software",
+    description: "The video is displayed in software.",
+    slug: "software",
+  },
+  {
+    title: "Hardware",
+    description: "The video is displayed in a hardware monitor.",
+    slug: "hardware",
+  },
+  {
+    title: "Bezier Curves",
+    description: "The video is displayed in a hardware monitor.",
+    slug: "bezier-curves",
+  },
+] satisfies Subcategory[];
 
-export function getSubcategories(category?: string): Option[] {
-  if (!category) return [];
-
-  const tags =
-    itemCategories
-      .find((c) => c.title === category)
-      ?.tags.map((s) => ({
-        label: s.title,
-        value: s.slug,
-      })) ?? [];
+export function getTags(): Option[] {
+  const tags = itemTags.map((tag) => ({
+    label: tag.title,
+    value: tag.slug,
+  }));
 
   return tags;
 }

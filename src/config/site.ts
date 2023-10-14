@@ -24,6 +24,18 @@ export const siteConfig = {
           description: "Everything that plays Bad Apple.",
           items: [],
         },
+        {
+          title: "Software",
+          href: "/items?tags=software",
+          description: "Everything that plays Bad Apple on Software",
+          items: [],
+        },
+        {
+          title: "Hardware",
+          href: "/items?tags=hardware",
+          description: "Everything that plays Bad Apple on Hardware",
+          items: [],
+        },
       ],
     },
     {

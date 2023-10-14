@@ -34,6 +34,7 @@ export async function filterItemsAction(query: string) {
 export async function getItemsAction(
   input: z.infer<typeof getItemsSchema>
 ) {
+  console.log({input})
   const [column, order] =
     (input.sort?.split(".") as [
       keyof Item | undefined,
