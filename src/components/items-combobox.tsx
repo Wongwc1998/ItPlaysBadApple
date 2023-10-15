@@ -3,9 +3,8 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { type Item } from "@/types";
-import { CircleIcon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
+import {  MagnifyingGlassIcon } from "@radix-ui/react-icons";
 
-import { itemCategories } from "@/config/items";
 import { cn, isMacOs } from "@/lib/utils";
 import { useDebounce } from "@/hooks/use-debounce";
 import { Button } from "@/components/ui/button";
@@ -13,7 +12,6 @@ import Image from "next/image";
 import {
   CommandDialog,
   CommandEmpty,
-  CommandGroup,
   CommandInput,
   CommandItem,
   CommandList,
@@ -116,10 +114,6 @@ export function ItemsCombobox() {
           ) : (
             data?.map((group, groupIndex) =>
               group.vars.map((item) => {
-                const CategoryIcon =
-                  itemCategories.find(
-                    (category) => category.title === item.title
-                  )?.icon ?? CircleIcon;
 
                 return (
                   <CommandItem

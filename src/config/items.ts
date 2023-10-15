@@ -1,6 +1,5 @@
-import type { Category, Option, Subcategory } from "@/types";
+import type {  Option, Subcategory } from "@/types";
 
-import { Icons } from "@/components/icons";
 
 export const sortOptions = [
   { label: "Date: Old to new", value: "createdAt.asc" },

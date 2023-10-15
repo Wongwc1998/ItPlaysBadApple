@@ -4,18 +4,14 @@ import * as React from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
   ChevronDownIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
 } from "@radix-ui/react-icons";
 import { Item, Option } from "@/types";
 import { ItemCard } from "@/components/cards/item-card";
 import { sortOptions } from "@/config/items";
 import { getTags } from "@/config/items";
 
-import { cn, toTitleCase, truncate } from "@/lib/utils";
-import { useDebounce } from "@/hooks/use-debounce";
+import { cn} from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,9 +20,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import {
   Sheet,

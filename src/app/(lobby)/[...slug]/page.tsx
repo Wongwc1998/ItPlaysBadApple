@@ -3,10 +3,6 @@ import { allPages } from "contentlayer/generated"
 
 import "@/styles/mdx.css"
 
-import { type Metadata } from "next"
-
-import { siteConfig } from "@/config/site"
-// import { absoluteUrl } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
 import { Mdx } from "@/components/mdx/mdx-components"
 import {
