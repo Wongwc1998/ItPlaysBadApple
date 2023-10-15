@@ -30,10 +30,45 @@ export const itemTags = [
     slug: "hardware",
   },
   {
-    title: "Bezier Curves",
-    description: "The video is displayed in a hardware monitor.",
-    slug: "bezier-curves",
+    title: "Retro",
+    description: "The video is displayed with retro hardware.",
+    slug: "retro",
   },
+  {
+    title: "Modern",
+    description: "The video is displayed with modern technology.",
+    slug: "modern",
+  },
+  {
+    title: "DIY",
+    description: "The video is displayed with DIY components.",
+    slug: "diy",
+  },
+  {
+    title: "Low Frame Rate",
+    description: "The video is displayed with a lower frame rate than 24FPS.",
+    slug: "low-frame-rate",
+  },
+  {
+    title: "Video Game",
+    description: "The video is displayed in a video game.",
+    slug: "video-game",
+  },
+  {
+    title: "Software Application",
+    description: "The video is displayed in a software application.",
+    slug: "software-application",
+  },
+  {
+    title: "Analogue",
+    description: "The video is displayed with analogue technology.",
+    slug: "analogue",
+  },
+  {
+    title: "Digital",
+    description: "The video is displayed with digital technology.",
+    slug: "digital",
+  }
 ] satisfies Subcategory[];
 
 export function getTags(): Option[] {
