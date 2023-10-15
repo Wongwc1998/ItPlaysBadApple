@@ -14,7 +14,7 @@ export async function filterItemsAction(query: string) {
     where: {
       title: {
         contains: query,
-        mode: 'insensitive', // This makes the filter case-insensitive,
+        mode: "insensitive", // This makes the filter case-insensitive,
       },
     },
     take: 10,
@@ -31,16 +31,14 @@ export async function filterItemsAction(query: string) {
   return [itemgroup];
 }
 
-export async function getItemsAction(
-  input: z.infer<typeof getItemsSchema>
-) {
-  console.log({input})
+export async function getItemsAction(input: z.infer<typeof getItemsSchema>) {
+  console.log({ input });
   const [column, order] =
     (input.sort?.split(".") as [
       keyof Item | undefined,
-      "asc" | "desc" | undefined,
-    ]) ?? []
-  const tags = input.tags?.split(".") ?? []
+      "asc" | "desc" | undefined
+    ]) ?? [];
+  const tags = input.tags?.split(".") ?? [];
 
   const items = await prisma.item.findMany({
     take: input.limit,
@@ -55,12 +53,10 @@ export async function getItemsAction(
       [column ?? "createdAt"]: order ?? "desc",
     },
   });
-   const count = 2;
-
-
+  const count = 2;
 
   return {
     items,
     count,
-  }
+  };
 }
