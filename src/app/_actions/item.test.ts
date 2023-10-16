@@ -3,7 +3,7 @@
 import { filterItemsAction, getItemsAction } from './item';
 
 describe('filterItemsAction', () => {
-  it('should return null for an empty query', () => {
+  it('should return an empty object for an empty query', () => {
     const result = filterItemsAction('');
     expect(result).toBeNull();
   });
