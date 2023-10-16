@@ -4,7 +4,6 @@ import { prismaDal } from "@/prismaDal";
 import { getTags } from "@/config/items";
 import { ItemCard } from "@/components/cards/item-card";
 import { Shell } from "@/components/shells/shell";
-import Link from "next/link";
 const dal = prismaDal;
 interface ItemPageProps {
   params: {
