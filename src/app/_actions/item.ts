@@ -1,6 +1,5 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
 import { type Item } from "@/types";
 import { type z } from "zod";
 import { prisma } from "@/app/db";
@@ -9,7 +8,7 @@ import { getItemsSchema } from "@/lib/validations/item";
 export async function filterItemsAction(query: string) {
   if (query.length === 0) return null;
 
-  //prisma search and filter results
+  try {
   const results = await prisma.item.findMany({
     where: {
       title: {
@@ -25,10 +24,14 @@ export async function filterItemsAction(query: string) {
     },
   });
 
-  let itemgroup = {
+  const itemgroup = {
     vars: results,
   };
   return [itemgroup];
+  } catch (error) {
+      console.error("Error filtering items:", error);
+      return null;
+    }
 }
 
 export async function getItemsAction(input: z.infer<typeof getItemsSchema>) {
@@ -39,11 +42,11 @@ export async function getItemsAction(input: z.infer<typeof getItemsSchema>) {
       "asc" | "desc" | undefined
     ]) ?? [];
   const tags = input.tags?.split(".") ?? [];
-
+  
+  try {
   const items = await prisma.item.findMany({
     take: input.limit,
     skip: input.offset,
-    //tags is an array of strings
     where: {
       tags: {
         hasEvery: tags,
@@ -59,4 +62,9 @@ export async function getItemsAction(input: z.infer<typeof getItemsSchema>) {
     items,
     count,
   };
+  }catch (error) {
+      // Handle and/or log the error
+      console.error("Error getting items:", error);
+      throw error;
+    }
 }
