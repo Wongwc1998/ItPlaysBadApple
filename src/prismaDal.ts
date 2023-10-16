@@ -8,10 +8,21 @@ export const prismaDal: DataAccessLayer = {
     return await prisma.item.findMany();
   },
   getItem: async (id) => {
-    console.log({ id });
-    console.log(typeof id);
     return await prisma.item.findUnique({
       where: { id },
+    });
+  },
+  getAuthor: async (id) => {
+    return await prisma.author.findUnique({
+      where: { id },
+    });
+  },
+  //just get the other newest 4 items by author for display on the author page
+  getOtherItems: async (authorId, itemId) => {
+    return await prisma.item.findMany({
+      where: { authorId, id: { not: itemId } },
+      take: 4,
+      orderBy: { createdAt: "desc" },
     });
   },
   deleteItem: async (id) => {
