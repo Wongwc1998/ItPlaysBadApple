@@ -1,65 +1,44 @@
-import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { Shell } from "@/components/shells/shell";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Skeleton } from "@/components/ui/skeleton"
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Icons } from "@/components/icons"
-import { Shell } from "@/components/shells/shell"
 
 export default function ItemLoading() {
   return (
     <Shell>
-      <div className="flex items-center space-x-2">
-        <Skeleton className="h-6 w-14" />
-        <Skeleton className="h-6 w-14" />
-        <Skeleton className="h-6 w-14" />
-      </div>
-      <div className="flex flex-col gap-8 md:flex-row md:gap-16">
-        <div className="w-full md:w-1/2">
-          <div className="flex flex-col gap-2">
-            <div
-              aria-label="Placeholder"
-              role="img"
-              aria-roledescription="placeholder"
-              className="flex aspect-square h-full flex-1 items-center justify-center bg-secondary"
-            >
-              <Icons.placeholder
-                className="h-9 w-9 text-muted-foreground"
-                aria-hidden="true"
-              />
+      <div className="m-4 p-4">
+        <div className="border flex flex-col md:flex-row dark:bg-slate-800 bg-gray-100 rounded items-center justify-center">
+          <div className="flex flex-col gap-2 md:w-1/2">
+            {/* Placeholder for VideoIframe */}
+            <AspectRatio ratio={4 / 3}>
+              <Skeleton className="rounded-md" />
+            </AspectRatio>
+          </div>
+
+          <div className="flex flex-col gap-4 mx-4 md:w-1/2">
+            {/* Placeholder for title */}
+            <Skeleton className="h-9 w-3/4 rounded-md" />
+
+            {/* Placeholder for author name */}
+            <div className="flex gap-2 mt-2">
+              <Skeleton className="h-6 w-16" />
+              <Skeleton className="h-6 w-1/4" />
             </div>
-            <div className="flex w-full items-center justify-center gap-2">
-              <Skeleton className="h-7 w-7 rounded-none" />
+
+            {/* Placeholder for description */}
+            <Skeleton className="h-24 w-full mt-4 rounded-md" />
+
+            {/* Placeholders for tags */}
+            <div className="mt-5 flex flex-wrap gap-2">
               {Array.from({ length: 3 }).map((_, i) => (
-                <Skeleton
-                  key={i}
-                  className="aspect-square h-full w-full max-w-[100px] rounded-none"
-                />
+                <Skeleton key={i} className="h-6 w-20 rounded-md" />
               ))}
-              <Skeleton className="h-7 w-7 rounded-none" />
             </div>
           </div>
         </div>
-        <Separator className="mt-4 md:hidden" />
-        <div className="flex w-full flex-col gap-4 md:w-1/2">
-          <div className="space-y-2">
-            <Skeleton className="h-9 w-16" />
-            <Skeleton className="h-6 w-10" />
-            <Skeleton className="h-6 w-14" />
-          </div>
-          <Separator className="my-1.5" />
-          <div className="flex items-center space-x-2">
-            <Skeleton className="h-8 w-[7.5rem]" />
-            <Skeleton className="h-8 w-24" />
-          </div>
-          <Separator className="mb-2.5 mt-5" />
-          <div className="flex items-center">
-            <Skeleton className="h-7 w-16" />
-            <Skeleton className="ml-auto h-4 w-4" />
-          </div>
-          <Separator className="mt-2.5" />
-        </div>
       </div>
-      <div className="overflow-hidden md:pt-6">
+            <div className="overflow-hidden md:pt-6">
         <Skeleton className="h-9 w-14" />
         <div className="overflow-x-auto pb-2 pt-6">
           <div className="flex gap-4">
@@ -91,5 +70,5 @@ export default function ItemLoading() {
         </div>
       </div>
     </Shell>
-  )
+  );
 }
