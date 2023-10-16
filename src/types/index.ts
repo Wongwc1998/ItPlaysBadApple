@@ -12,6 +12,12 @@ export type Item = {
   updatedAt: Date;
 };
 
+export type Author = {
+  id: number;
+  name: string;
+  url: string;
+};
+
 export interface NavItem {
   title: string;
   href?: string;
