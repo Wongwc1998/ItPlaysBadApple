@@ -25,17 +25,11 @@ export const siteConfig = {
           items: [],
         },
         {
-          title: "Software",
-          href: "/items?tags=software",
-          description: "Everything that plays Bad Apple on Software",
+          title: "Authors",
+          href: "/authors",
+          description: "The people who made these Bad Apple!! videos.",
           items: [],
-        },
-        {
-          title: "Hardware",
-          href: "/items?tags=hardware",
-          description: "Everything that plays Bad Apple on Hardware",
-          items: [],
-        },
+        }
       ],
     },
     {
