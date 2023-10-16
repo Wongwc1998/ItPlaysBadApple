@@ -45,7 +45,7 @@ export function ItemCard({ Item, className, ...props }: ItemCardProps) {
       </Link>
       <Link href={`/item/${Item.id}`} tabIndex={-1}>
         <CardContent className="grid gap-2.5 p-4">
-          <CardTitle className="line-clamp-1">{Item.title}</CardTitle>
+          <CardTitle className="line-clamp-3 py-1 flex flex-row items-center">{Item.title}</CardTitle>
           <CardDescription className="line-clamp-2">
           </CardDescription>
         </CardContent>
