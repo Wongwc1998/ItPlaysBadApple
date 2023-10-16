@@ -32,7 +32,7 @@ async function main() {
     authorsData.map((author) => 
       prisma.author.upsert({
         where: { id: author.id },
-        update: {},
+        update: { id: author.id, name: author.name, url: author.url },
         create: author,
       })
     )
