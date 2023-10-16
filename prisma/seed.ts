@@ -3,7 +3,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   const authorsData = [
-    { id: 1, name: "Author 1", url: "https://google.com" },
+    { id: 1, name: "Junferno", url: "https://www.youtube.com/@Junferno" },
     { id: 2, name: "Author 2", url: "https://google.com" },
   ];
 
@@ -21,7 +21,7 @@ async function main() {
       id: 2,
       title: "Bad Apple!! played on Google Maps",
       description: "Another sample item description.",
-      authorId: 2,
+      authorId: 1,
       videoUrl: "r-axdVfM0c0",
       previewImgUrl: "https://img.youtube.com/vi/r-axdVfM0c0/hqdefault.jpg",
       tags: ["software", "modern", "software-application", "digital"],
