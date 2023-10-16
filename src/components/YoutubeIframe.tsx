@@ -19,14 +19,7 @@ const VideoIframe: React.FC<IProps> = (props) => {
   );
 
   const handleChangeVideoWidth = useCallback(() => {
-    const ratio =
-      window.innerWidth > 990
-        ? 1.0
-        : window.innerWidth > 522
-        ? 1.2
-        : window.innerWidth > 400
-        ? 1.45
-        : 1.85;
+    const ratio = 1.0;
     const height = iframeRef.current
       ? iframeRef.current.offsetWidth * 0.5625
       : defaultHeight;
@@ -35,14 +28,7 @@ const VideoIframe: React.FC<IProps> = (props) => {
 
   useEffect(() => {
     window.addEventListener("resize", handleChangeVideoWidth);
-    const ratio =
-      window.innerWidth > 990
-        ? 1.0
-        : window.innerWidth > 522
-        ? 1.2
-        : window.innerWidth > 400
-        ? 1.45
-        : 1.85;
+    const ratio = 1.0;
     const height = iframeRef.current
       ? iframeRef.current.offsetWidth * 0.5625
       : defaultHeight;
@@ -56,7 +42,7 @@ const VideoIframe: React.FC<IProps> = (props) => {
     <iframe
       ref={iframeRef}
       title={title}
-      width="100%"
+      width="90%"
       height={`${videoHeight}px`}
       src={videoURL}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
