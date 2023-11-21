@@ -9,62 +9,81 @@ export async function filterItemsAction(query: string) {
   if (query.length === 0) return null;
 
   try {
-  const results = await prisma.item.findMany({
-    where: {
-      title: {
-        contains: query,
-        mode: "insensitive", // This makes the filter case-insensitive,
+    const results = await prisma.item.findMany({
+      where: {
+        title: {
+          contains: query,
+          mode: "insensitive",
+        },
       },
-    },
-    take: 10,
-    select: {
-      id: true,
-      title: true,
-      previewImgUrl: true,
-    },
-  });
+      orderBy: {
+        createdAt: "desc",
+      },
+      take: 10,
+      select: {
+        id: true,
+        title: true,
+        previewImgUrl: true,
+      },
+    });
 
-  const itemgroup = {
-    vars: results,
-  };
-  return [itemgroup];
+    const itemgroup = {
+      vars: results,
+    };
+    return [itemgroup];
   } catch (error) {
-      console.error("Error filtering items:", error);
-      return null;
-    }
+    console.error("Error filtering items:", error);
+    return null;
+  }
 }
 
 export async function getItemsAction(input: z.infer<typeof getItemsSchema>) {
   console.log({ input });
-  const [column, order] =
-    (input.sort?.split(".") as [
-      keyof Item | undefined,
-      "asc" | "desc" | undefined
-    ]) ?? [];
-  const tags = input.tags?.split(".") ?? [];
-  
-  try {
-  const items = await prisma.item.findMany({
-    take: input.limit,
-    skip: input.offset,
-    where: {
+  const [column, order] = (input.sort?.split(".") as [
+    keyof Item,
+    "asc" | "desc"
+  ]) ?? ["createdAt", "desc"];
+  const tags = (input.tags?.split(".") as Item["tags"]) ?? [];
+  // Initialize an array to hold the conditions
+
+  const conditions = [];
+  if (tags && tags.length > 0) {
+    conditions.push({
       tags: {
         hasEvery: tags,
       },
-    },
-    orderBy: {
-      [column ?? "createdAt"]: order ?? "desc",
-    },
-  });
-  const count = 2;
+    });
+  }
+  // Convert authorId to a number
 
-  return {
-    items,
-    count,
-  };
-  }catch (error) {
-      // Handle and/or log the error
-      console.error("Error getting items:", error);
-      throw error;
-    }
+  // Now conditionally add it to your conditions array
+  if (input.authorId) {
+    const authorIdNumber = parseInt(input.authorId, 10);
+    conditions.push({
+      authorId: authorIdNumber,
+    });
+  }
+
+  try {
+    const items = await prisma.item.findMany({
+      take: input.limit,
+      skip: input.offset,
+      where: {
+        AND: conditions,
+      },
+      orderBy: {
+        [column]: order,
+      },
+    });
+    const count = 2;
+
+    return {
+      items,
+      count,
+    };
+  } catch (error) {
+    // Handle and/or log the error
+    console.error("Error getting items:", error);
+    throw error;
+  }
 }
