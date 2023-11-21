@@ -18,6 +18,13 @@ export type Author = {
   url: string;
 };
 
+export interface CuratedAuthor {
+  id: Author["id"]
+  name: Author["name"]
+  description?: Author["description"]
+  productCount?: number
+}
+
 export interface NavItem {
   title: string;
   href?: string;

@@ -5,23 +5,18 @@ export const authorSchema = z.object({
   description: z.string().optional(),
 })
 
-export const getauthorSchema = z.object({
+export const getAuthorSchema = z.object({
   id: z.number(),
   userId: z.string(),
 })
 
-export const getauthorsSchema = z.object({
+export const getAuthorsSchema = z.object({
   description: z.string().optional(),
   limit: z.number().default(10).optional(),
   offset: z.number().default(0).optional(),
   sort: z
     .string()
     .regex(/^\w+.(asc|desc)$/)
-    .optional()
-    .nullable(),
-  statuses: z
-    .string()
-    .regex(/^\d+.\d+$/)
     .optional()
     .nullable(),
   userId: z.string().optional(),

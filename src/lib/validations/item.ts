@@ -31,7 +31,7 @@ export const getItemsSchema = z.object({
     .regex(/^\w+.(asc|desc)$/)
     .optional()
     .nullable(),
-  author_ids: z
+  authorId: z
     .string()
     .regex(/^\d+.\d+$/)
     .optional()
