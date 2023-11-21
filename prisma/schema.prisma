@@ -26,5 +26,8 @@ model Author {
   id    Int    @id @default(autoincrement()) // Add an ID field to the Author
   name  String @unique
   url   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+  itemCount Int
   items Item[] // One to many relation to items
 }
