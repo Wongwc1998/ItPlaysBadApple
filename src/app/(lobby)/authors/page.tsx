@@ -1,5 +1,4 @@
 import { type Metadata } from "next"
-import { env } from "@/env.mjs"
 
 import {
   PageHeader,
@@ -10,11 +9,6 @@ import { Shell } from "@/components/shells/shell"
 import { Authors } from "@/components/authors"
 import { getAuthorsAction } from "@/app/_actions/author"
 
-export const metadata: Metadata = {
-  metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
-  title: "Authors",
-  description: "Buy authors from our authors",
-}
 
 interface AuthorsPageProps {
   searchParams: {
@@ -33,7 +27,6 @@ export default async function AuthorsPage({ searchParams }: AuthorsPageProps) {
     limit: limit,
     offset: offset,
     sort: typeof sort === "string" ? sort : "productCount.desc",
-    statuses: typeof statuses === "string" ? statuses : null,
   })
 
   const pageCount = Math.ceil(authorsTransaction.count / limit)
