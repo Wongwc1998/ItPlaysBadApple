@@ -21,7 +21,7 @@ export type Author = {
 export interface CuratedAuthor {
   id: Author["id"]
   name: Author["name"]
-  description?: Author["description"]
+  description?: string
   productCount?: number
 }
 
