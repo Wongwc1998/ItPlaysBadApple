@@ -5582,7 +5582,7 @@ const itemsData = [
     authorsData.map((author) =>
       prisma.author.upsert({
         where: { id: author.id },
-        update: { id: author.id, name: author.name, url: author.url, itemCount: author.itemCount },
+        update: { id: author.id, name: author.name, url: author.url},
         create: author,
       })
     )
@@ -5598,7 +5598,7 @@ const itemsData = [
     )
   );
 
-  console.log({ authors, items });
+  // console.log({ authors, items });
 }
 
 main()
