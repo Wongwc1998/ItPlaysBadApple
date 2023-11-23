@@ -26,7 +26,7 @@ export default async function AuthorsPage({ searchParams }: AuthorsPageProps) {
   const authorsTransaction = await getAuthorsAction({
     limit: limit,
     offset: offset,
-    sort: typeof sort === "string" ? sort : "productCount.desc",
+    sort: typeof sort === "string" ? sort : "itemCount.desc",
   })
 
   const pageCount = Math.ceil(authorsTransaction.count / limit)
@@ -39,7 +39,7 @@ export default async function AuthorsPage({ searchParams }: AuthorsPageProps) {
       >
         <PageHeaderHeading size="sm">Authors</PageHeaderHeading>
         <PageHeaderDescription size="sm">
-          Buy products from our authors
+          Look at the items from our authors
         </PageHeaderDescription>
       </PageHeader>
       <Authors

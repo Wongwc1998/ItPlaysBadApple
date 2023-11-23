@@ -35,7 +35,7 @@ export function Authors({ authors, pageCount, ...props }: AuthorsProps) {
   // Search params
   const page = searchParams?.get("page") ?? "1"
   const per_page = searchParams?.get("per_page") ?? "8"
-  const sort = searchParams?.get("sort") ?? "productCount.desc"
+  const sort = searchParams?.get("sort") ?? "itemCount.desc"
   const statuses = searchParams?.get("statuses")
 
   // Create query string

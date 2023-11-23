@@ -17,7 +17,7 @@ model Item {
   videoUrl      String
   tags          String[]
   previewImgUrl String
-  createdAt    DateTime    @default(now())
+  createdAt    DateTime
   updatedAt    DateTime    @default(now()) @updatedAt
 
   @@index([authorId])
@@ -29,6 +29,7 @@ model Author {
   url   String
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
-  itemCount Int  @default(0)
+  itemCount Int
+  thumbnail String @default("")
   items Item[] // One to many relation to items
 }

@@ -35,7 +35,7 @@ export function AuthorCard({ author, href }: AuthorCardProps) {
           <CardDescription className="line-clamp-2">
             {author.description?.length
               ? author.description
-              : `Explore ${author.name} products`}
+              : `${author.name}`}
           </CardDescription>
         </CardHeader>
       </Card>

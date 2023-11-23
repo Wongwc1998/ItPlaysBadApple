@@ -22,7 +22,7 @@ export interface CuratedAuthor {
   id: Author["id"]
   name: Author["name"]
   description?: string
-  productCount?: number
+  itemCount?: number
 }
 
 export interface NavItem {

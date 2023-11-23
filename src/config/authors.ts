@@ -1,11 +1,11 @@
 export const authorSortOptions = [
   {
     label: "Item count: Low to high",
-    value: "productCount.asc",
+    value: "itemCount.asc",
   },
   {
     label: "Item count: High to low",
-    value: "productCount.desc",
+    value: "itemCount.desc",
   },
   { label: "Date: Old to new", value: "createdAt.asc" },
   {
