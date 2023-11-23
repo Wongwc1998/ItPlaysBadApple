@@ -19,8 +19,6 @@ import {
 import { AuthorCard } from "@/components/cards/author-card"
 import { PaginationButton } from "@/components/pagers/pagination-button"
 
-import { FacetedFilter } from "./faceted-filter"
-
 interface AuthorsProps extends React.HTMLAttributes<HTMLDivElement> {
   authors: Author[]
   pageCount: number
@@ -93,22 +91,6 @@ export function Authors({ authors, pageCount, ...props }: AuthorsProps) {
           </DropdownMenuContent>
         </DropdownMenu>
         <div className="flex flex-1 items-center space-x-2">
-          <FacetedFilter
-            title="Status"
-            filterValues={filterValues}
-            setFilterValues={setFilterValues}
-          />
-          {filterValues.length > 0 && (
-            <Button
-              aria-label="Reset filters"
-              variant="ghost"
-              className="h-8 px-2 lg:px-3"
-              onClick={() => setFilterValues([])}
-            >
-              Reset
-              <Cross2Icon className="ml-2 h-4 w-4" aria-hidden="true" />
-            </Button>
-          )}
         </div>
       </div>
       {!isPending && !authors.length ? (
