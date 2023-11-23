@@ -105,7 +105,6 @@ export function Authors({ authors, pageCount, ...props }: AuthorsProps) {
         {authors.map((author) => (
           <AuthorCard
             key={author.id}
-            href={`/products?author_ids=${author.id}`}
             author={author}
           />
         ))}
