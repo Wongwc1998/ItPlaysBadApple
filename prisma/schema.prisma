@@ -30,6 +30,6 @@ model Author {
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
   itemCount Int
-  thumbnail String @default("")
+  thumbnail String
   items Item[] // One to many relation to items
 }
