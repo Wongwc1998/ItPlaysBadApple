@@ -32,7 +32,7 @@ export function Authors({ authors, pageCount, ...props }: AuthorsProps) {
 
   // Search params
   const page = searchParams?.get("page") ?? "1"
-  const per_page = searchParams?.get("per_page") ?? "8"
+  const per_page = searchParams?.get("per_page") ?? "16"
   const sort = searchParams?.get("sort") ?? "itemCount.desc"
 
   // Create query string
@@ -101,7 +101,7 @@ export function Authors({ authors, pageCount, ...props }: AuthorsProps) {
           </p>
         </div>
       ) : null}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
         {authors.map((author) => (
           <AuthorCard
             key={author.id}

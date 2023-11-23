@@ -18,7 +18,7 @@ export default async function AuthorsPage({ searchParams }: AuthorsPageProps) {
   const { page, per_page, sort } = searchParams ?? {}
 
   // Authors transaction
-  const limit = typeof per_page === "string" ? parseInt(per_page) : 8
+  const limit = typeof per_page === "string" ? parseInt(per_page) : 16
   const offset = typeof page === "string" ? (parseInt(page) - 1) * limit : 0
 
   const authorsTransaction = await getAuthorsAction({
@@ -37,7 +37,7 @@ export default async function AuthorsPage({ searchParams }: AuthorsPageProps) {
       >
         <PageHeaderHeading size="sm">Authors</PageHeaderHeading>
         <PageHeaderDescription size="sm">
-          Look at the items from our authors
+          Look at our authors
         </PageHeaderDescription>
       </PageHeader>
       <Authors
