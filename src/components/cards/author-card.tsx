@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { type CuratedAuthor } from "@/types"
+import { type Author } from "@/types"
 
 import { getRandomPatternStyle } from "@/lib/generate-pattern"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/card"
 
 interface AuthorCardProps {
-  author: CuratedAuthor
+  author: Author
   href: string
 }
 

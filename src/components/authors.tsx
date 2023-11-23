@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import type { CuratedAuthor } from "@/types"
+import type { Author } from "@/types"
 import { ChevronDownIcon, Cross2Icon } from "@radix-ui/react-icons"
 
 import { authorSortOptions } from "@/config/authors"
@@ -22,7 +22,7 @@ import { PaginationButton } from "@/components/pagers/pagination-button"
 import { FacetedFilter } from "./faceted-filter"
 
 interface AuthorsProps extends React.HTMLAttributes<HTMLDivElement> {
-  authors: CuratedAuthor[]
+  authors: Author[]
   pageCount: number
 }
 
@@ -36,7 +36,6 @@ export function Authors({ authors, pageCount, ...props }: AuthorsProps) {
   const page = searchParams?.get("page") ?? "1"
   const per_page = searchParams?.get("per_page") ?? "8"
   const sort = searchParams?.get("sort") ?? "itemCount.desc"
-  const statuses = searchParams?.get("statuses")
 
   // Create query string
   const createQueryString = React.useCallback(
@@ -56,24 +55,7 @@ export function Authors({ authors, pageCount, ...props }: AuthorsProps) {
     [searchParams]
   )
 
-  // Author status filter
-  const [filterValues, setFilterValues] = React.useState<string[]>(
-    statuses?.split(".") ?? []
-  )
 
-  React.useEffect(() => {
-    startTransition(() => {
-      router.push(
-        `${pathname}?${createQueryString({
-          statuses: filterValues?.length ? filterValues.join(".") : null,
-        })}`,
-        {
-          scroll: false,
-        }
-      )
-    })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filterValues])
 
   return (
     <section className="flex flex-col space-y-6" {...props}>

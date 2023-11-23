@@ -16,14 +16,10 @@ export type Author = {
   id: number;
   name: string;
   url: string;
+  description?: string;
+  itemCount: number;
+  thumbnail: string;
 };
-
-export interface CuratedAuthor {
-  id: Author["id"]
-  name: Author["name"]
-  description?: string
-  itemCount?: number
-}
 
 export interface NavItem {
   title: string;

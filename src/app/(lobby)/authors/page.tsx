@@ -1,5 +1,3 @@
-import { type Metadata } from "next"
-
 import {
   PageHeader,
   PageHeaderDescription,
@@ -17,7 +15,7 @@ interface AuthorsPageProps {
 }
 
 export default async function AuthorsPage({ searchParams }: AuthorsPageProps) {
-  const { page, per_page, sort, statuses } = searchParams ?? {}
+  const { page, per_page, sort } = searchParams ?? {}
 
   // Authors transaction
   const limit = typeof per_page === "string" ? parseInt(per_page) : 8
