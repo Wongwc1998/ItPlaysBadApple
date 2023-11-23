@@ -39,6 +39,7 @@
     "next-themes": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-multi-carousel": "^2.8.4",
     "react-wrap-balancer": "latest",
     "react-youtube": "latest",
     "sonner": "latest",

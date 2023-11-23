@@ -3,7 +3,7 @@
 import * as React from "react"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import type { Author } from "@/types"
-import { ChevronDownIcon, Cross2Icon } from "@radix-ui/react-icons"
+import { ChevronDownIcon } from "@radix-ui/react-icons"
 
 import { authorSortOptions } from "@/config/authors"
 import { cn } from "@/lib/utils"
