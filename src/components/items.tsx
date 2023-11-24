@@ -9,6 +9,7 @@ import { Item, Option } from "@/types";
 import { ItemCard } from "@/components/cards/item-card";
 import { sortOptions } from "@/config/items";
 import { getTags } from "@/config/items";
+import { PaginationButton } from "@/components/pagers/pagination-button";
 
 import { cn} from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -193,6 +194,15 @@ export function Items({
           <ItemCard key={item.id} Item={item} />
         ))}
       </div>
+            {items.length ? (
+        <PaginationButton
+          pageCount={pageCount}
+          page={page}
+          per_page={per_page}
+          sort={sort}
+          createQueryString={createQueryString}
+        />
+      ) : null}
     </section>
   );
 }

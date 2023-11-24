@@ -1,4 +1,3 @@
-
 import { ItemCard } from "@/components/cards/item-card";
 import { prismaDal } from "@/prismaDal";
 import CarouselWrapper from "@/components/CarouselWrapper";
@@ -46,7 +45,7 @@ export default async function Home() {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        {items?.map((item) => (
+        {items?.slice(0, 2).map((item) => (
           <ItemCard Item={item} key={item.id} />
         ))}
       </CarouselWrapper>

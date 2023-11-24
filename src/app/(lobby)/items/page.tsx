@@ -20,12 +20,17 @@ export default async function ItemsPage({ searchParams }: ItemsPageProps) {
   const limit = typeof per_page === "string" ? parseInt(per_page) : 8;
   const offset = typeof page === "string" ? (parseInt(page) - 1) * limit : 0;
 
-  const {items, count} = await getItemsAction({
+  const itemsTransaction = await getItemsAction({
     limit,
     offset,
     sort: typeof sort === "string" ? sort : null,
     tags: typeof tags === "string" ? tags : null,
   });
+
+  const pageCount = Math.ceil(itemsTransaction.count / limit)
+  console.log(itemsTransaction.count);
+  console.log(pageCount);
+  console.log(limit);
 
   return (
     <Shell>
@@ -38,7 +43,7 @@ export default async function ItemsPage({ searchParams }: ItemsPageProps) {
           Everything that plays &quot;Bad Apple!!&quot;.
         </PageHeaderDescription>
       </PageHeader>
-      <Items items={items} pageCount={1} authorId={1} tags={[]} />
+      <Items items={itemsTransaction.items} pageCount={pageCount} authorId={1} tags={[]} />
     </Shell>
   );
 }

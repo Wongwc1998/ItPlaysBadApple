@@ -65,17 +65,24 @@ export async function getItemsAction(input: z.infer<typeof getItemsSchema>) {
   }
 
   try {
-    const items = await prisma.item.findMany({
-      take: input.limit,
-      skip: input.offset,
-      where: {
-        AND: conditions,
-      },
-      orderBy: {
-        [column]: order,
-      },
-    });
-    const count = 2;
+    const transaction = await prisma.$transaction([
+      prisma.item.findMany({
+        take: input.limit,
+        skip: input.offset,
+        where: {
+          AND: conditions,
+        },
+        orderBy: {
+          [column]: order,
+        },
+      }),
+      prisma.item.count({
+        where: {
+          AND: conditions,
+        },
+      }),
+    ]);
+    const [items, count] = transaction;
 
     return {
       items,
