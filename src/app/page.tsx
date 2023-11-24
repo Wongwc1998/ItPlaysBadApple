@@ -28,7 +28,7 @@ export default async function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-row items-center justify-between p-24">
+    <main className="min-h-screen items-center justify-between p-24">
       <CarouselWrapper
         responsive={responsive}
         swipeable={true}
@@ -45,7 +45,7 @@ export default async function Home() {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        {items?.slice(0, 2).map((item) => (
+        {items?.map((item) => (
           <ItemCard Item={item} key={item.id} />
         ))}
       </CarouselWrapper>

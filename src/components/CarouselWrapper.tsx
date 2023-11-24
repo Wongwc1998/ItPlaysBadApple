@@ -2,6 +2,7 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
+import "react-multi-carousel/lib/styles.css";
 
 // Import CarouselProps type if available from 'react-multi-carousel'
 import { CarouselProps } from 'react-multi-carousel';
