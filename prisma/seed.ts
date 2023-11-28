@@ -3167,6 +3167,7 @@ async function main() {
       id: 1,
       createdAt: "2011-12-30T02:28:01Z",
       authorId: 1,
+      tags: ["retro", "software", "digital"],
     },
     {
       title: "Play Bad Apple On Apple II",
@@ -3177,6 +3178,7 @@ async function main() {
       id: 2,
       createdAt: "2014-11-28T09:23:21Z",
       authorId: 2,
+      tags: ["retro", "hardware"],
     },
     {
       title: "C1-65A - Bad Apple (HD)",
@@ -3187,6 +3189,7 @@ async function main() {
       id: 3,
       createdAt: "2010-12-20T10:32:44Z",
       authorId: 3,
+      tags: ["hardware", "modern"],
     },
     {
       title: "Bad apple",
@@ -3196,6 +3199,7 @@ async function main() {
       id: 4,
       createdAt: "2015-06-29T12:36:56Z",
       authorId: 4,
+      tags: ["digital"],
     },
     {
       title: "Bad Apple - Vectrex version",
@@ -3206,6 +3210,7 @@ async function main() {
       id: 5,
       createdAt: "2015-04-09T09:54:06Z",
       authorId: 5,
+      tags: ["retro", "hardware"],
     },
     {
       title: "Bad Apple - Atari 2600",
@@ -3216,6 +3221,7 @@ async function main() {
       id: 6,
       createdAt: "2014-11-25T02:01:09Z",
       authorId: 6,
+      tags: ["retro", "hardware"],
     },
     {
       title: "Windows 3.1 Plays Bad Apple!",
@@ -3226,6 +3232,7 @@ async function main() {
       id: 7,
       createdAt: "2011-05-29T18:07:26Z",
       authorId: 7,
+      tags: ["retro", "software"],
     },
     {
       title:
@@ -3237,6 +3244,7 @@ async function main() {
       id: 8,
       createdAt: "2009-11-29T13:46:25Z",
       authorId: 8,
+      tags: ["retro", "hardware"],
     },
     {
       title: "[HD] Bad Windows XP!! (with video!)",
@@ -3247,6 +3255,7 @@ async function main() {
       id: 9,
       createdAt: "2015-02-05T20:32:15Z",
       authorId: 9,
+      tags: ["modern", "software"],
     },
     {
       title: "[HD] Ubuntu Bad Apple!! (with video!)",
@@ -3257,6 +3266,7 @@ async function main() {
       id: 10,
       createdAt: "2015-03-14T20:19:18Z",
       authorId: 9,
+      tags: ["modern", "software"],
     },
     {
       title: "Bad apple on a Vintage B&W portable TV",
@@ -3266,6 +3276,7 @@ async function main() {
       id: 11,
       createdAt: "2016-03-07T16:00:44Z",
       authorId: 10,
+      tags: ["retro", "hardware"],
     },
     {
       title:
@@ -3277,6 +3288,7 @@ async function main() {
       id: 12,
       createdAt: "2009-10-31T02:57:09Z",
       authorId: 11,
+      tags: ["modern", "hardware"],
     },
     {
       title: "Bad Apple!! - Stop Motion PV",
@@ -3287,6 +3299,7 @@ async function main() {
       id: 13,
       createdAt: "2010-01-28T02:38:22Z",
       authorId: 12,
+      tags: ["modern", "digital"],
     },
     {
       title: "Touhou 4-Bad Apple (8-bit Remix with NES video Playback)",
@@ -3297,6 +3310,7 @@ async function main() {
       id: 14,
       createdAt: "2010-10-25T08:31:48Z",
       authorId: 13,
+      tags: ["retro", "audio"],
     },
     {
       title: "Bad Apple TI-84+ SE - New Arrangement",
@@ -3307,6 +3321,7 @@ async function main() {
       id: 15,
       createdAt: "2014-01-18T05:52:40Z",
       authorId: 6,
+      tags: ["hardware", "modern"],
     },
     {
       title: "Bad Apple on a Sansa Clip+",
@@ -3316,6 +3331,7 @@ async function main() {
       id: 16,
       createdAt: "2011-12-23T04:51:31Z",
       authorId: 7,
+      tags: ["hardware", "digital"],
     },
     {
       title: "Bad apple!!_Undertale version",
@@ -3326,6 +3342,7 @@ async function main() {
       id: 17,
       createdAt: "2016-02-22T17:36:56Z",
       authorId: 14,
+      tags: ["video-game"],
     },
     {
       title: "[Touhou] Bad Apple!! - Sega Megadrive / Genesis version",
@@ -3336,6 +3353,7 @@ async function main() {
       id: 18,
       createdAt: "2012-11-29T01:07:58Z",
       authorId: 15,
+      tags: ["retro", "hardware"],
     },
     {
       title: "Touhou - Bad Apple on eight floppy drives",
@@ -3346,6 +3364,7 @@ async function main() {
       id: 19,
       createdAt: "2012-03-12T20:37:01Z",
       authorId: 16,
+      tags: ["hardware", "diy"],
     },
     {
       title:
@@ -3357,6 +3376,7 @@ async function main() {
       id: 20,
       createdAt: "2016-05-02T12:48:29Z",
       authorId: 17,
+      tags: ["video-game", "modern"],
     },
     {
       title: "Touhou Bad Apple Full Version CMD EDITION",
@@ -3366,6 +3386,7 @@ async function main() {
       id: 21,
       createdAt: "2015-05-05T16:31:43Z",
       authorId: 18,
+      tags: ["software", "retro"],
     },
     {
       title: "Play the Bad Apple on the x86 DOS TEXT MODE (with Music)",
@@ -3376,6 +3397,7 @@ async function main() {
       id: 22,
       createdAt: "2015-01-24T19:57:38Z",
       authorId: 19,
+      tags: ["retro", "software"],
     },
     {
       title: "Bad Apple, DOS version, VGA 13h (seizure!)",
@@ -3386,6 +3408,7 @@ async function main() {
       id: 23,
       createdAt: "2013-03-26T09:55:00Z",
       authorId: 20,
+      tags: ["retro", "software"],
     },
     {
       title: "\u3010 Touhou Lasershow \u3011 Bad 445 Aaaaaaapple (HD)",
@@ -3396,6 +3419,7 @@ async function main() {
       id: 24,
       createdAt: "2010-09-22T21:23:13Z",
       authorId: 11,
+      tags: ["modern", "hardware"],
     },
     {
       title: "Bad Apple!! in IBM PC/XT",
@@ -3406,6 +3430,7 @@ async function main() {
       id: 25,
       createdAt: "2014-03-27T12:18:48Z",
       authorId: 21,
+      tags: ["retro", "hardware"],
     },
     {
       title: "IBM XT Portable 5155 8088 Domination Bad Apple",
@@ -3416,6 +3441,7 @@ async function main() {
       id: 26,
       createdAt: "2016-01-03T14:28:48Z",
       authorId: 22,
+      tags: ["retro", "hardware"],
     },
     {
       title: "Bad Apple!! - GBC Rom",
@@ -3426,6 +3452,7 @@ async function main() {
       id: 27,
       createdAt: "2016-03-16T09:26:58Z",
       authorId: 23,
+      tags: ["retro", "hardware"],
     },
     {
       title: "Bad Apple on CASIO fx-9750GII - re-record",
@@ -3436,6 +3463,7 @@ async function main() {
       id: 28,
       createdAt: "2016-08-27T05:47:35Z",
       authorId: 24,
+      tags: ["hardware", "digital"],
     },
     {
       title: "Bad Apple on CASIO fx-9860GII",
@@ -3446,6 +3474,7 @@ async function main() {
       id: 29,
       createdAt: "2015-07-05T11:05:34Z",
       authorId: 25,
+      tags: ["hardware", "digital"],
     },
     {
       title: "Bad Apple on Ti-nspire",
@@ -3455,6 +3484,7 @@ async function main() {
       id: 30,
       createdAt: "2012-09-29T20:15:46Z",
       authorId: 26,
+      tags: ["hardware", "modern"],
     },
     {
       title: "Bad Apple Ti-84+ SE",
@@ -3465,6 +3495,7 @@ async function main() {
       id: 31,
       createdAt: "2016-06-18T17:32:08Z",
       authorId: 27,
+      tags: ["hardware", "modern"],
     },
     {
       title: "Bad Apple on Noritake VFD",
@@ -3475,6 +3506,7 @@ async function main() {
       id: 32,
       createdAt: "2011-06-25T13:35:55Z",
       authorId: 28,
+      tags: ["hardware", "digital"],
     },
     {
       title:
@@ -3486,6 +3518,7 @@ async function main() {
       id: 33,
       createdAt: "2011-06-05T02:31:26Z",
       authorId: 29,
+      tags: ["retro", "hardware"],
     },
     {
       title: '\u3010English Sub\u3011 NEC PC-6601 Sings "Bad Apple!!"',
@@ -3496,6 +3529,7 @@ async function main() {
       id: 34,
       createdAt: "2011-07-02T07:03:07Z",
       authorId: 30,
+      tags: ["retro", "hardware"],
     },
     {
       title: "Bad Apple on IBM PC/AT (+ boot process)",
@@ -3506,6 +3540,7 @@ async function main() {
       id: 35,
       createdAt: "2016-02-10T23:56:16Z",
       authorId: 31,
+      tags: ["retro", "hardware"],
     },
     {
       title: "Windows 3.1 Plays Bad Apple on a real computer",
@@ -3515,6 +3550,7 @@ async function main() {
       id: 36,
       createdAt: "2012-06-26T00:11:46Z",
       authorId: 32,
+      tags: ["software", "retro", "hardware"],
     },
     {
       title: "8088 Domination Running on a Toshiba T3200 286 Portable",
@@ -3525,6 +3561,7 @@ async function main() {
       id: 37,
       createdAt: "2017-03-20T06:20:17Z",
       authorId: 33,
+      tags: ["retro", "hardware"],
     },
     {
       title: "Bad Apple on CNN (Cirno News Network)",
@@ -3535,6 +3572,7 @@ async function main() {
       id: 38,
       createdAt: "2010-01-30T21:16:25Z",
       authorId: 34,
+      tags: ["modern", "digital"],
     },
     {
       title: "Bad Apple (Shadow Art) for Amiga",
@@ -3544,6 +3582,7 @@ async function main() {
       id: 39,
       createdAt: "2014-06-24T23:30:54Z",
       authorId: 35,
+      tags: ["retro", "hardware"],
     },
     {
       title: "Touhou Bad Apple GBA",
@@ -3554,6 +3593,7 @@ async function main() {
       id: 40,
       createdAt: "2016-04-21T04:58:52Z",
       authorId: 36,
+      tags: ["retro", "hardware", "video-game"],
     },
     {
       title: "Bad Apple Teletext Demo",
@@ -3564,6 +3604,7 @@ async function main() {
       id: 41,
       createdAt: "2017-02-26T15:05:37Z",
       authorId: 37,
+      tags: ["retro", "hardware", "diy"],
     },
     {
       title: "Bad apple + 32x16 Dot Display",
@@ -3574,6 +3615,7 @@ async function main() {
       id: 42,
       createdAt: "2016-11-26T15:57:42Z",
       authorId: 38,
+      tags: ["modern", "hardware", "diy"],
     },
     {
       title: "iPhone Bad Apple",
@@ -3584,6 +3626,7 @@ async function main() {
       id: 43,
       createdAt: "2011-04-22T04:41:45Z",
       authorId: 39,
+      tags: ["modern", "hardware", "digital"],
     },
     {
       title:
@@ -3595,6 +3638,7 @@ async function main() {
       id: 44,
       createdAt: "2014-06-16T11:21:10Z",
       authorId: 40,
+      tags: ["software", "modern", "digital"],
     },
     {
       title: "Bad Apple!! on Arduino Uno with 84x48 display",
@@ -3605,6 +3649,7 @@ async function main() {
       id: 45,
       createdAt: "2013-09-27T22:28:53Z",
       authorId: 41,
+      tags: ["hardware", "diy", "modern"],
     },
     {
       title: "Touhou - Bad Apple (Sega Master System)",
@@ -3615,6 +3660,7 @@ async function main() {
       id: 46,
       createdAt: "2017-03-28T00:21:27Z",
       authorId: 42,
+      tags: ["retro", "hardware", "video-game"],
     },
     {
       title: "Bad Apple - An Atari Demo (2017)",
@@ -3625,6 +3671,7 @@ async function main() {
       id: 47,
       createdAt: "2017-06-05T11:24:23Z",
       authorId: 43,
+      tags: ["retro", "hardware"],
     },
     {
       title: "Bad Apple 64",
@@ -3635,6 +3682,7 @@ async function main() {
       id: 48,
       createdAt: "2014-06-29T06:34:55Z",
       authorId: 44,
+      tags: ["retro", "hardware"],
     },
     {
       title: "bad apple demo for Atari 8-bit",
@@ -3644,6 +3692,7 @@ async function main() {
       id: 49,
       createdAt: "2017-04-01T14:50:21Z",
       authorId: 45,
+      tags: ["retro", "hardware"],
     },
     {
       title: 'BR-TV v0.6: "Bad Apple" Commodore 64 [C64 w/ REU]',
@@ -3664,6 +3713,7 @@ async function main() {
       id: 51,
       createdAt: "2012-04-16T15:58:36Z",
       authorId: 47,
+      tags: ["retro", "hardware", "video-game"],
     },
     {
       title: "Teletext Bad Apple by BitShifters (BBC Micro)",
@@ -3674,6 +3724,7 @@ async function main() {
       id: 52,
       createdAt: "2017-02-27T23:25:42Z",
       authorId: 48,
+      tags: ["retro", "hardware", "diy"],
     },
     {
       title: "Bad Apple!! on Impulse Tracker",
@@ -3684,6 +3735,7 @@ async function main() {
       id: 53,
       createdAt: "2016-11-19T10:19:02Z",
       authorId: 49,
+      tags: ["software", "audio", "retro"],
     },
     {
       title: "Bad apple 2 demo Atari Jaguar",
@@ -3693,6 +3745,7 @@ async function main() {
       id: 54,
       createdAt: "2017-12-28T15:28:06Z",
       authorId: 50,
+      tags: ["retro", "hardware", "video-game"],
     },
     {
       title: "Touhou ~ Bad Apple on the laser scanner (v2)",
@@ -3703,6 +3756,7 @@ async function main() {
       id: 55,
       createdAt: "2013-06-26T02:50:03Z",
       authorId: 51,
+      tags: ["modern", "hardware", "diy"],
     },
     {
       title:
@@ -3714,6 +3768,7 @@ async function main() {
       id: 56,
       createdAt: "2018-09-09T08:55:05Z",
       authorId: 52,
+      tags: ["retro", "hardware"],
     },
     {
       title: "Bad Apple!! played on Windows 10 File Explorer",
@@ -3724,6 +3779,7 @@ async function main() {
       id: 57,
       createdAt: "2021-03-27T23:04:24Z",
       authorId: 53,
+      tags: ["software", "modern"],
     },
     {
       title: "Bad Python!! (Bad Apple!! in a 64-kilobyte Raspberry Pi program)",
@@ -3734,6 +3790,7 @@ async function main() {
       id: 58,
       createdAt: "2016-07-24T21:22:44Z",
       authorId: 54,
+      tags: ["modern", "hardware", "software"],
     },
     {
       title: "Onslaught - Bad Apple 64 - C64 Demo",
@@ -3744,6 +3801,7 @@ async function main() {
       id: 59,
       createdAt: "2014-06-29T20:24:15Z",
       authorId: 55,
+      tags: ["retro", "hardware"],
     },
     {
       title:
@@ -3755,6 +3813,7 @@ async function main() {
       id: 60,
       createdAt: "2018-03-23T12:17:44Z",
       authorId: 56,
+      tags: ["modern", "software", "audio"],
     },
     {
       title: "Bad Apple - Neo Geo",
@@ -3765,6 +3824,7 @@ async function main() {
       id: 61,
       createdAt: "2017-06-11T17:36:03Z",
       authorId: 57,
+      tags: ["retro", "hardware", "video-game"],
     },
     {
       title:
@@ -3785,6 +3845,7 @@ async function main() {
       id: 63,
       createdAt: "2016-06-25T06:24:16Z",
       authorId: 59,
+      tags: ["software", "video-game"],
     },
     {
       title: "Factorio: Bad Apple!! on 24x16 Lamp Array (Real-time Recording)",
@@ -3795,6 +3856,7 @@ async function main() {
       id: 64,
       createdAt: "2018-02-18T17:07:48Z",
       authorId: 60,
+      tags: ["software", "video-game", "modern"],
     },
     {
       title: "Bad Apple on an iPod mini",
@@ -3804,6 +3866,7 @@ async function main() {
       id: 65,
       createdAt: "2019-05-04T12:31:09Z",
       authorId: 10,
+      tags: ["hardware", "modern", "digital"],
     },
     {
       title: "Bad apple on KY-01L",
@@ -3813,6 +3876,7 @@ async function main() {
       id: 66,
       createdAt: "2019-10-01T16:00:50Z",
       authorId: 10,
+      tags: ["modern", "hardware", "digital"],
     },
     {
       title: "Bad apple on KY-01L (fast refresh mode)",
@@ -3822,6 +3886,7 @@ async function main() {
       id: 67,
       createdAt: "2019-10-01T16:11:37Z",
       authorId: 10,
+      tags: ["modern", "hardware", "digital"],
     },
     {
       title:
@@ -3833,6 +3898,7 @@ async function main() {
       id: 68,
       createdAt: "2019-10-26T20:01:36Z",
       authorId: 61,
+      tags: ["diy", "audio"],
     },
     {
       title:
@@ -3853,6 +3919,7 @@ async function main() {
       id: 70,
       createdAt: "2017-05-30T10:17:59Z",
       authorId: 62,
+      tags: ["software", "modern"],
     },
     {
       title:
@@ -3864,6 +3931,7 @@ async function main() {
       id: 71,
       createdAt: "2017-03-21T05:05:22Z",
       authorId: 63,
+      tags: ["hardware", "modern", "diy"],
     },
     {
       title: "DIY ILDA Laser Projector (Bad Apple!! PV / No Blanking)",
@@ -3874,6 +3942,7 @@ async function main() {
       id: 72,
       createdAt: "2016-12-21T18:22:38Z",
       authorId: 64,
+      tags: ["hardware", "diy", "modern"],
     },
     {
       title:
@@ -3896,6 +3965,7 @@ async function main() {
       id: 74,
       createdAt: "2020-07-04T22:48:53Z",
       authorId: 66,
+      tags: ["modern", "hardware"],
     },
     {
       title: "Threadripper 3990X plays Bad Apple in task manager",
@@ -3906,6 +3976,7 @@ async function main() {
       id: 75,
       createdAt: "2020-06-25T11:44:07Z",
       authorId: 67,
+      tags: ["modern", "hardware", "digital"],
     },
     {
       title:
@@ -3917,6 +3988,7 @@ async function main() {
       id: 76,
       createdAt: "2020-03-16T20:15:45Z",
       authorId: 68,
+      tags: ["modern", "hardware", "digital"],
     },
     {
       title: "Bad Apple!! played on Desmos Graphing Calculator",
@@ -3927,6 +3999,7 @@ async function main() {
       id: 77,
       createdAt: "2021-03-05T05:54:12Z",
       authorId: 53,
+      tags: ["software", "modern", "digital"],
     },
     {
       title: "Bad Apple on Gamebuino",
@@ -3937,6 +4010,7 @@ async function main() {
       id: 78,
       createdAt: "2016-12-23T21:39:54Z",
       authorId: 69,
+      tags: ["hardware", "modern", "video-game"],
     },
     {
       title: "Terraria: Bad Apple!! (Triumph of engineering)",
@@ -3947,6 +4021,7 @@ async function main() {
       id: 79,
       createdAt: "2016-11-16T16:30:04Z",
       authorId: 70,
+      tags: ["software", "modern", "video-game"],
     },
     {
       title: "BadApple PV ASCII Under MS Word 1.x",
@@ -3957,6 +4032,7 @@ async function main() {
       id: 80,
       createdAt: "2012-12-03T15:28:42Z",
       authorId: 71,
+      tags: ["software", "retro"],
     },
     {
       title:
@@ -3968,6 +4044,7 @@ async function main() {
       id: 81,
       createdAt: "2020-10-10T21:54:29Z",
       authorId: 72,
+      tags: ["retro", "hardware", "video-game"],
     },
     {
       title:
@@ -3989,6 +4066,7 @@ async function main() {
       id: 83,
       createdAt: "2020-12-12T16:53:46Z",
       authorId: 74,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad apple but it's windows command prompt",
@@ -3999,6 +4077,7 @@ async function main() {
       id: 84,
       createdAt: "2021-04-10T12:00:14Z",
       authorId: 75,
+      tags: ["modern", "software"],
     },
     {
       title: "(Bad Apple) Watch",
@@ -4009,6 +4088,7 @@ async function main() {
       id: 85,
       createdAt: "2021-01-14T05:50:21Z",
       authorId: 76,
+      tags: ["modern", "hardware", "digital"],
     },
     {
       title: "Bad Apple HD - Atari 8-bit Demo by JAC! of WUDSN (NTSC)",
@@ -4019,6 +4099,7 @@ async function main() {
       id: 86,
       createdAt: "2018-11-03T22:20:47Z",
       authorId: 77,
+      tags: ["retro", "hardware", "video-game"],
     },
     {
       title: "Bad Apple - Mattel Intellivision",
@@ -4029,6 +4110,7 @@ async function main() {
       id: 87,
       createdAt: "2017-05-28T05:14:01Z",
       authorId: 78,
+      tags: ["retro", "hardware", "video-game"],
     },
     {
       title: "Bad apple but its discord messages",
@@ -4039,6 +4121,7 @@ async function main() {
       id: 88,
       createdAt: "2021-01-18T12:58:01Z",
       authorId: 79,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! played on Google Maps",
@@ -4049,6 +4132,7 @@ async function main() {
       id: 89,
       createdAt: "2021-02-19T21:15:40Z",
       authorId: 53,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! but it's made of YouTube captions",
@@ -4059,6 +4143,7 @@ async function main() {
       id: 90,
       createdAt: "2019-05-18T16:34:40Z",
       authorId: 80,
+      tags: ["modern", "digital"],
     },
     {
       title: "Bad Apple!! played on Minecraft sheep [original]",
@@ -4069,6 +4154,7 @@ async function main() {
       id: 91,
       createdAt: "2020-10-10T20:12:38Z",
       authorId: 81,
+      tags: ["modern", "video-game", "software"],
     },
     {
       title: "Bad Apple!! in Firefox browser tabs",
@@ -4079,6 +4165,7 @@ async function main() {
       id: 92,
       createdAt: "2021-01-16T12:53:30Z",
       authorId: 82,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! but it's a VS Code Auto-Formatter",
@@ -4089,6 +4176,7 @@ async function main() {
       id: 93,
       createdAt: "2021-03-01T22:49:31Z",
       authorId: 53,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! played on WeBWork Homework System (Flash Warning)",
@@ -4280,6 +4368,7 @@ async function main() {
       id: 112,
       createdAt: "2021-12-04T15:29:13Z",
       authorId: 98,
+      tags: ["modern", "video-game", "software"],
     },
     {
       title: "Bad Apple on 32K EEPROM (No CPU)",
@@ -4290,6 +4379,7 @@ async function main() {
       id: 113,
       createdAt: "2022-02-18T13:27:09Z",
       authorId: 99,
+      tags: ["hardware", "diy", "retro"],
     },
     {
       title: "Bad Apple!! played on Bad Apple!!",
@@ -4300,6 +4390,7 @@ async function main() {
       id: 114,
       createdAt: "2022-02-22T13:00:30Z",
       authorId: 100,
+      tags: ["modern", "digital"],
     },
     {
       title: 'BAD APPLE demo on 2.7" Sharp memory display',
@@ -4310,6 +4401,7 @@ async function main() {
       id: 115,
       createdAt: "2020-08-25T16:29:21Z",
       authorId: 101,
+      tags: ["modern", "hardware", "digital"],
     },
     {
       title:
@@ -4321,6 +4413,7 @@ async function main() {
       id: 116,
       createdAt: "2021-04-16T14:00:07Z",
       authorId: 53,
+      tags: ["modern", "software", "software-application", "digital"],
     },
     {
       title: "Bad Apple on an E-ink E paper display (2022)",
@@ -4331,6 +4424,7 @@ async function main() {
       id: 117,
       createdAt: "2022-06-08T20:50:01Z",
       authorId: 102,
+      tags: ["modern", "hardware", "digital"],
     },
     {
       title: "Bad Apple!! but it's on a 3d printer",
@@ -4341,6 +4435,7 @@ async function main() {
       id: 118,
       createdAt: "2022-02-06T20:04:48Z",
       authorId: 103,
+      tags: ["modern", "hardware", "diy"],
     },
     {
       title: "Bad Apple on LM3S8962 evaluation board",
@@ -4351,6 +4446,7 @@ async function main() {
       id: 119,
       createdAt: "2022-10-13T17:42:43Z",
       authorId: 104,
+      tags: ["hardware", "modern", "digital"],
     },
     {
       title: "bad apple in terminal",
@@ -4360,6 +4456,7 @@ async function main() {
       id: 120,
       createdAt: "2022-06-24T06:51:56Z",
       authorId: 105,
+      tags: ["software", "modern", "digital"],
     },
     {
       title: "Hand Drawing a RISC V CPU and Playing Bad Apple on It",
@@ -4370,6 +4467,7 @@ async function main() {
       id: 121,
       createdAt: "2020-04-17T10:09:46Z",
       authorId: 106,
+      tags: ["hardware", "diy", "modern"],
     },
     {
       title: "36 - Bad Apple on a NABU Computer (prototype)",
@@ -4380,6 +4478,7 @@ async function main() {
       id: 122,
       createdAt: "2022-12-16T10:18:27Z",
       authorId: 107,
+      tags: ["hardware", "retro", "digital"],
     },
     {
       title:
@@ -4391,6 +4490,7 @@ async function main() {
       id: 123,
       createdAt: "2010-11-21T13:03:03Z",
       authorId: 108,
+      tags: ["hardware", "modern", "digital"],
     },
     {
       title: "Bad Apple but its VIDEO is ported to Famitracker",
@@ -4401,6 +4501,7 @@ async function main() {
       id: 124,
       createdAt: "2022-12-20T00:00:10Z",
       authorId: 109,
+      tags: ["software", "retro", "audio"],
     },
     {
       title: "Bad Apple!! but it's CSGO bullet holes",
@@ -4411,6 +4512,7 @@ async function main() {
       id: 125,
       createdAt: "2023-01-22T04:58:35Z",
       authorId: 110,
+      tags: ["software", "modern", "video-game"],
     },
     {
       title: "Bad Apple but it's played through a phosphor screen",
@@ -4420,6 +4522,7 @@ async function main() {
       id: 126,
       createdAt: "2023-02-21T21:58:58Z",
       authorId: 111,
+      tags: ["hardware", "retro", "digital"],
     },
     {
       title: "Bad Apple but it's molecular dynamics simulation",
@@ -4430,6 +4533,7 @@ async function main() {
       id: 127,
       createdAt: "2023-02-10T12:32:23Z",
       authorId: 112,
+      tags: ["modern", "software", "digital"],
     },
     {
       title:
@@ -4441,6 +4545,7 @@ async function main() {
       id: 128,
       createdAt: "2009-12-29T03:21:19Z",
       authorId: 113,
+      tags: ["hardware", "retro", "video-game"],
     },
     {
       title: "bad apple!! zx spectrum styling",
@@ -4451,6 +4556,7 @@ async function main() {
       id: 129,
       createdAt: "2016-02-14T16:29:27Z",
       authorId: 114,
+      tags: ["retro", "hardware", "digital"],
     },
     {
       title: "Bad Apple , but played on apples.",
@@ -4461,6 +4567,7 @@ async function main() {
       id: 130,
       createdAt: "2023-02-26T13:33:23Z",
       authorId: 115,
+      tags: ["diy", "hardware", "audio"],
     },
     {
       title: "Bad Apple, played on Bad Apples (as requested)",
@@ -4470,6 +4577,7 @@ async function main() {
       id: 131,
       createdAt: "2023-03-11T18:11:06Z",
       authorId: 115,
+      tags: ["diy", "hardware", "audio"],
     },
     {
       title:
@@ -4481,6 +4589,7 @@ async function main() {
       id: 132,
       createdAt: "2022-08-02T12:31:24Z",
       authorId: 116,
+      tags: ["hardware", "retro", "digital"],
     },
     {
       title: "r/place 2023 - FULL Bad Apple!!",
@@ -4491,6 +4600,7 @@ async function main() {
       id: 133,
       createdAt: "2023-07-23T14:05:35Z",
       authorId: 117,
+      tags: ["modern", "software", "digital"],
     },
     {
       title:
@@ -4512,6 +4622,7 @@ async function main() {
       id: 135,
       createdAt: "2022-06-18T22:37:27Z",
       authorId: 119,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! Running on multiple Windows in Windows...?",
@@ -4522,6 +4633,7 @@ async function main() {
       id: 136,
       createdAt: "2023-10-20T13:33:51Z",
       authorId: 120,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple !! - Tesla coil + LaserShow",
@@ -4532,6 +4644,7 @@ async function main() {
       id: 137,
       createdAt: "2021-03-28T15:16:32Z",
       authorId: 121,
+      tags: ["hardware", "modern", "audio"],
     },
     {
       title: "Bad Apple but every frame is a prime number",
@@ -4542,6 +4655,7 @@ async function main() {
       id: 138,
       createdAt: "2022-05-01T02:54:50Z",
       authorId: 122,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! but it's played on Ultimaker Cura",
@@ -4552,6 +4666,7 @@ async function main() {
       id: 139,
       createdAt: "2022-10-07T12:42:02Z",
       authorId: 103,
+      tags: ["software", "modern", "digital"],
     },
     {
       title: "bad apple but it's magic eye",
@@ -4562,6 +4677,7 @@ async function main() {
       id: 140,
       createdAt: "2021-04-30T12:44:37Z",
       authorId: 123,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "bad apple but AI generated",
@@ -4572,6 +4688,7 @@ async function main() {
       id: 141,
       createdAt: "2022-10-13T04:51:36Z",
       authorId: 124,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple But The Engine Changes Every 10 Seconds",
@@ -4582,6 +4699,7 @@ async function main() {
       id: 142,
       createdAt: "2021-03-09T21:54:39Z",
       authorId: 125,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! but rendered with Minecraft Creeper Explosions",
@@ -4673,6 +4791,7 @@ async function main() {
       id: 151,
       createdAt: "2021-04-08T13:00:31Z",
       authorId: 53,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! Windsong Lyre",
@@ -4683,6 +4802,7 @@ async function main() {
       id: 152,
       createdAt: "2021-03-28T09:03:23Z",
       authorId: 133,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple on GBA SP",
@@ -5090,6 +5210,7 @@ async function main() {
       id: 193,
       createdAt: "2021-07-07T23:19:17Z",
       authorId: 53,
+      tags: ["modern", "software", "web", "digital"],
     },
     {
       title: "Bad Apple on Genshin GRASS",
@@ -5100,6 +5221,7 @@ async function main() {
       id: 194,
       createdAt: "2021-07-08T10:51:07Z",
       authorId: 170,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad Morshu!! [YTPMV] (Morshu Bad Apple!! Vocaloid Cover)",
@@ -5110,6 +5232,7 @@ async function main() {
       id: 195,
       createdAt: "2021-02-03T16:52:12Z",
       authorId: 171,
+      tags: ["modern", "software", "audio"],
     },
     {
       title: "Bad Apple TI-83 Plus Silver Edition",
@@ -5120,6 +5243,7 @@ async function main() {
       id: 196,
       createdAt: "2021-02-25T06:08:03Z",
       authorId: 172,
+      tags: ["hardware", "retro", "digital"],
     },
     {
       title:
@@ -5131,6 +5255,7 @@ async function main() {
       id: 197,
       createdAt: "2021-03-25T08:05:02Z",
       authorId: 138,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! but it's in Free Draw",
@@ -5141,6 +5266,7 @@ async function main() {
       id: 198,
       createdAt: "2021-08-07T01:13:22Z",
       authorId: 173,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! but it's procedurally generated apple mosaics",
@@ -5151,6 +5277,7 @@ async function main() {
       id: 199,
       createdAt: "2022-05-18T17:03:46Z",
       authorId: 174,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! in Starbound",
@@ -5161,6 +5288,7 @@ async function main() {
       id: 200,
       createdAt: "2021-02-22T05:18:09Z",
       authorId: 175,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad Apple in Library of Babel",
@@ -5171,6 +5299,7 @@ async function main() {
       id: 201,
       createdAt: "2021-04-28T16:41:35Z",
       authorId: 176,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "bad apple in terraria",
@@ -5181,6 +5310,7 @@ async function main() {
       id: 202,
       createdAt: "2021-05-21T17:53:43Z",
       authorId: 177,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Synthesia bad apple",
@@ -5191,6 +5321,7 @@ async function main() {
       id: 203,
       createdAt: "2012-11-30T14:09:17Z",
       authorId: 178,
+      tags: ["modern", "software", "audio"],
     },
     {
       title: "Bad Apple in ASCII",
@@ -5200,6 +5331,7 @@ async function main() {
       id: 204,
       createdAt: "2021-02-01T17:28:33Z",
       authorId: 179,
+      tags: ["retro", "software", "digital"],
     },
     {
       title: "Grubhub ad but it's Bad Apple",
@@ -5210,6 +5342,7 @@ async function main() {
       id: 205,
       createdAt: "2021-01-14T03:42:45Z",
       authorId: 180,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "bad apple but it's apple emoji",
@@ -5220,6 +5353,7 @@ async function main() {
       id: 206,
       createdAt: "2021-01-31T17:01:46Z",
       authorId: 181,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple but it is in roblox",
@@ -5230,6 +5364,7 @@ async function main() {
       id: 207,
       createdAt: "2021-01-28T10:32:40Z",
       authorId: 182,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad Apple Deepfake Choir (24)",
@@ -5240,6 +5375,7 @@ async function main() {
       id: 208,
       createdAt: "2020-08-23T15:50:01Z",
       authorId: 183,
+      tags: ["modern", "software", "digital", "ai"],
     },
     {
       title: "Bad Apple!! in Scrap Mechanic",
@@ -5250,6 +5386,7 @@ async function main() {
       id: 209,
       createdAt: "2021-01-29T05:54:19Z",
       authorId: 184,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad Apple but it's all Arcaea trace",
@@ -5260,6 +5397,7 @@ async function main() {
       id: 210,
       createdAt: "2021-01-22T12:00:13Z",
       authorId: 185,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad Apple on LEGO EV3 Mindstorms",
@@ -5270,6 +5408,7 @@ async function main() {
       id: 211,
       createdAt: "2016-01-21T06:27:40Z",
       authorId: 186,
+      tags: ["modern", "hardware", "digital"],
     },
     {
       title: "bad apple but it's a discord voice channel user list",
@@ -5280,6 +5419,7 @@ async function main() {
       id: 212,
       createdAt: "2021-03-24T22:27:59Z",
       authorId: 187,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple! but it's a slice of a volume",
@@ -5290,6 +5430,7 @@ async function main() {
       id: 213,
       createdAt: "2022-11-21T08:35:45Z",
       authorId: 160,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "MINECRAFT Bad Apple But Enderman Render It",
@@ -5299,6 +5440,7 @@ async function main() {
       id: 214,
       createdAt: "2022-11-27T07:53:01Z",
       authorId: 188,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad Apple but drawn using a single line. (Seizure Warning)",
@@ -5309,6 +5451,7 @@ async function main() {
       id: 215,
       createdAt: "2022-11-29T02:00:37Z",
       authorId: 189,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! but it's played on the YouTube Homepage",
@@ -5319,6 +5462,7 @@ async function main() {
       id: 216,
       createdAt: "2022-11-12T13:00:24Z",
       authorId: 190,
+      tags: ["modern", "software", "web", "digital"],
     },
     {
       title: "Bad Apple from Chiseled Bookshelves in Minecraft",
@@ -5329,6 +5473,7 @@ async function main() {
       id: 217,
       createdAt: "2022-11-17T21:11:45Z",
       authorId: 191,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad Apple but Played on Christmas Lights",
@@ -5338,6 +5483,7 @@ async function main() {
       id: 218,
       createdAt: "2022-12-19T00:52:23Z",
       authorId: 192,
+      tags: ["modern", "hardware", "digital"],
     },
     {
       title:
@@ -5349,6 +5495,7 @@ async function main() {
       id: 219,
       createdAt: "2023-02-06T05:11:25Z",
       authorId: 193,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "WorstApple #3 | Bad Apple But Its ANALOG Clocks...",
@@ -5359,6 +5506,7 @@ async function main() {
       id: 220,
       createdAt: "2023-01-31T16:50:40Z",
       authorId: 193,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple on a 7 Segment Digital Clock Display",
@@ -5369,6 +5517,7 @@ async function main() {
       id: 221,
       createdAt: "2021-05-10T21:56:20Z",
       authorId: 194,
+      tags: ["modern", "hardware", "digital"],
     },
     {
       title: "Bad Apple but with only straight lines",
@@ -5379,6 +5528,7 @@ async function main() {
       id: 222,
       createdAt: "2022-12-28T01:45:14Z",
       authorId: 195,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple but with onion skin enabled",
@@ -5389,6 +5539,7 @@ async function main() {
       id: 223,
       createdAt: "2023-02-19T08:58:39Z",
       authorId: 196,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple But Played Using Iron Trapdoors in Minecraft",
@@ -5399,6 +5550,7 @@ async function main() {
       id: 224,
       createdAt: "2023-02-16T18:30:32Z",
       authorId: 197,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad apple - but its meowsynth",
@@ -5409,6 +5561,7 @@ async function main() {
       id: 225,
       createdAt: "2021-09-04T21:51:06Z",
       authorId: 198,
+      tags: ["modern", "software", "audio"],
     },
     {
       title: "MINECRAFT Bad Apple But Colored Version",
@@ -5418,6 +5571,7 @@ async function main() {
       id: 226,
       createdAt: "2022-11-12T10:09:26Z",
       authorId: 188,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "WorstApple #5 | BAD APPLE BUT YOU CAN ONLY SEE IT IN 720P",
@@ -5428,6 +5582,7 @@ async function main() {
       id: 227,
       createdAt: "2023-02-08T04:43:07Z",
       authorId: 193,
+      tags: ["modern", "software", "digital"],
     },
     {
       title:
@@ -5439,6 +5594,7 @@ async function main() {
       id: 228,
       createdAt: "2022-08-13T09:24:06Z",
       authorId: 199,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "bad apple but you have to dodge the black pixels",
@@ -5449,6 +5605,7 @@ async function main() {
       id: 229,
       createdAt: "2022-12-08T08:41:10Z",
       authorId: 200,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad AppKit   HD 1080p",
@@ -5459,6 +5616,7 @@ async function main() {
       id: 230,
       createdAt: "2021-04-10T23:20:46Z",
       authorId: 201,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "responding to some comments",
@@ -5469,6 +5627,7 @@ async function main() {
       id: 231,
       createdAt: "2021-04-07T03:14:30Z",
       authorId: 53,
+      tags: ["modern", "software", "digital"],
     },
     {
       title:
@@ -5480,6 +5639,7 @@ async function main() {
       id: 232,
       createdAt: "2010-02-25T18:54:28Z",
       authorId: 132,
+      tags: ["art", "performance", "physical"],
     },
     {
       title: "Bad Apple but Played in Conway's Game of Life",
@@ -5490,6 +5650,7 @@ async function main() {
       id: 233,
       createdAt: "2023-02-23T12:19:36Z",
       authorId: 202,
+      tags: ["modern", "software", "simulation"],
     },
     {
       title: "Bad Apple in Minecraft [Command Blocks]",
@@ -5500,6 +5661,7 @@ async function main() {
       id: 234,
       createdAt: "2019-08-11T14:05:26Z",
       authorId: 203,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Touhou - Bad Apple on 8 Musical Floppy Drives",
@@ -5510,6 +5672,7 @@ async function main() {
       id: 235,
       createdAt: "2015-03-03T05:05:50Z",
       authorId: 204,
+      tags: ["modern", "hardware", "audio"],
     },
     {
       title: "Bad Apple - Touhou.  Floppy Drive Orchestra",
@@ -5520,6 +5683,7 @@ async function main() {
       id: 236,
       createdAt: "2014-10-25T12:23:52Z",
       authorId: 205,
+      tags: ["modern", "hardware", "audio"],
     },
     {
       title: "Touhou \u2013 Bad Apple (Samsung Cover)",
@@ -5529,6 +5693,7 @@ async function main() {
       id: 237,
       createdAt: "2015-04-30T09:03:25Z",
       authorId: 206,
+      tags: ["modern", "hardware", "audio"],
     },
     {
       title: '"Touhou - Bad Apple!!" on a Google Spreadsheet',
@@ -5539,6 +5704,7 @@ async function main() {
       id: 238,
       createdAt: "2020-10-18T19:37:33Z",
       authorId: 207,
+      tags: ["modern", "software", "web", "digital"],
     },
     {
       title: "I'm back, with a TI-84 Plus emulator and Bad Apple",
@@ -5549,6 +5715,7 @@ async function main() {
       id: 239,
       createdAt: "2021-02-01T13:14:07Z",
       authorId: 208,
+      tags: ["modern", "software", "emulation"],
     },
     {
       title: "Bad Apple But Played On Notepad++ And Not Flickering.",
@@ -5559,6 +5726,7 @@ async function main() {
       id: 240,
       createdAt: "2021-04-25T16:46:45Z",
       authorId: 138,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! But it's a Geometry Dash level",
@@ -5569,6 +5737,7 @@ async function main() {
       id: 241,
       createdAt: "2021-02-16T19:37:51Z",
       authorId: 209,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title:
@@ -5580,6 +5749,7 @@ async function main() {
       id: 242,
       createdAt: "2022-01-28T09:37:58Z",
       authorId: 210,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "DON'T YOU LECTURE ME WITH YOUR THIRTY DOLLAR BAD APPLE",
@@ -5590,6 +5760,7 @@ async function main() {
       id: 243,
       createdAt: "2022-02-03T22:00:21Z",
       authorId: 211,
+      tags: ["modern", "software", "web", "digital"],
     },
     {
       title: "Bad Apple Channel Reveals Analytics",
@@ -5600,6 +5771,7 @@ async function main() {
       id: 244,
       createdAt: "2022-05-20T04:00:19Z",
       authorId: 53,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple!! on a QR Code Generator",
@@ -5610,6 +5782,7 @@ async function main() {
       id: 245,
       createdAt: "2021-11-01T23:15:45Z",
       authorId: 175,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple in space but bitrate doesn't get destroyed pt.1",
@@ -5620,6 +5793,7 @@ async function main() {
       id: 246,
       createdAt: "2022-07-29T19:15:53Z",
       authorId: 156,
+      tags: ["modern", "software", "digital"],
     },
     {
       title: "Bad Apple but in Apex Legends",
@@ -5630,6 +5804,7 @@ async function main() {
       id: 247,
       createdAt: "2021-11-18T16:47:27Z",
       authorId: 212,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Developing a roguelike, but instead Bad Apple",
@@ -5640,6 +5815,7 @@ async function main() {
       id: 248,
       createdAt: "2022-11-09T09:14:24Z",
       authorId: 213,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad Apple on a GPS",
@@ -5650,6 +5826,7 @@ async function main() {
       id: 249,
       createdAt: "2022-11-08T23:05:30Z",
       authorId: 214,
+      tags: ["hardware", "retro", "digital"],
     },
     {
       title: "Bad Apple on Chiseled Bookshelf",
@@ -5660,6 +5837,7 @@ async function main() {
       id: 250,
       createdAt: "2022-11-17T20:56:28Z",
       authorId: 215,
+      tags: ["modern", "software", "video-game"],
     },
     {
       title: "Bad Apple!! played in Team Fortress 2 using VScripts",
