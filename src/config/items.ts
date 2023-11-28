@@ -67,7 +67,17 @@ export const itemTags = [
     title: "Digital",
     description: "The video is displayed with digital technology.",
     slug: "digital",
-  }
+  },
+  {
+    title: "Audio",
+    description: "The video only deals with the song, not the video. (i.e. a remix of the song)",
+    slug: "audio",
+  },
+  {
+    title: "Curated",
+    description: "This video is curated",
+    slug: "curated",
+  },
 ] satisfies Subcategory[];
 
 export function getTags(): Option[] {

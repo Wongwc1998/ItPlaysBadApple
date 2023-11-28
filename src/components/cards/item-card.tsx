@@ -23,7 +23,7 @@ export function ItemCard({ Item, className, ...props }: ItemCardProps) {
 
   return (
     <Card
-      className={cn("h-full overflow-hidden rounded-sm", className)}
+      className={cn("h-full overflow-hidden rounded-lg", className)}
       {...props}
     >
       <Link href={`/item/${Item.id}`}>
