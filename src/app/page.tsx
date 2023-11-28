@@ -11,11 +11,11 @@ export default async function Home() {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 8,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -26,6 +26,32 @@ export default async function Home() {
       items: 1,
     },
   };
+// Define the type for the button group functions if available or use 'any'
+interface CustomButtonGroupProps {
+  next: () => void;
+  previous: () => void;
+}
+
+const CustomButtonGroup: React.FC<CustomButtonGroupProps> = ({ next, previous }) => {
+  return (
+    <div className="absolute top-1/2 transform -translate-y-1/2 left-4 right-4 flex justify-between w-full">
+      <button
+        onClick={previous}
+        className="text-black" // Style your button accordingly
+      >
+        {"<"}
+      </button>
+      <button
+        onClick={next}
+        className="text-black" // Style your button accordingly
+      >
+        {">"}
+      </button>
+    </div>
+  );
+};
+
+
 
   return (
     <main className="min-h-screen items-center justify-between p-24">
@@ -38,15 +64,15 @@ export default async function Home() {
         autoPlay={false}
         autoPlaySpeed={3000}
         keyBoardControl={true}
-        customTransition="all .5"
+        customTransition="all .5s ease"
         transitionDuration={500}
-        containerClass="carousel-container"
+        containerClass="carousel-container relative" // Center align carousel
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
+        itemClass="carousel-item-padding-40-px px-2" // Add horizontal space between items
       >
         {items?.map((item) => (
-          <ItemCard Item={item} key={item.id} />
+          <ItemCard Item={item} key={item.id} className="px-2" /> // Add padding to each item
         ))}
       </CarouselWrapper>
     </main>
