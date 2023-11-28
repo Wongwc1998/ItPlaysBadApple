@@ -16,7 +16,7 @@ interface AuthorCardProps {
 
 export function AuthorCard({ author }: AuthorCardProps) {
   return (
-    <Link href={author.url}>
+    <Link href={`author/${author.id}`} tabIndex={-1}>
       <Card className="h-full overflow-hidden">
         <AspectRatio ratio={9 / 9}>
           <Image
